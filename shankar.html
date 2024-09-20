@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses After 12th</title>
+    <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
+    <link rel="stylesheet" href="shankar.css">
+    <style>
+        .modal { display: none; }
+        .subject-content { display: none; }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="way.html"><img src="../IMAGES/white.png" alt="" height="60px" width="60px"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../HTML/way.html">Home</a></li>
+                <li><a href="../HTML/courses.html">Courses</a></li>
+                <li><a href="../HTML/govtjobs.html">Government Jobs</a></li>
+                <li><a href="../HTML/careers.html">Careers</a></li>
+                <li><a href="../HTML/roadmaps.html">Road Maps</a></li>
+                <li><a href="../HTML/interview.html">Interview Questions</a></li>
+                <li><a href="../HTML/romap.html">Q&A</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <button class="search-btn">Go</button>
+        </div>
+    </header>
+
+    <div class="image-banner">
+        <img src="../IMAGES/12thconfusion.png" alt="Banner Image">
+    </div>
+
+    <div class="hero">
+        <h1>Courses After Graduation</h1>
+        <p>Explore various undergraduate programs and vocational courses available after 12th grade.</p>
+    </div>
+
+   
+    <section>
+
+        <div class="course" id="mtech">
+            <h2>M.Tech (Master of Technology)</h2>
+            <p>Master of Technology (M.Tech) is a postgraduate program that offers specializations in various engineering fields such as Computer Science, Civil, Mechanical, and Electrical Engineering...</p>
+            <button class="toggle-btn" data-target="mtech-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="mba">
+            <h2>MBA (Master of Business Administration)</h2>
+            <p>Master of Business Administration (MBA) is a popular postgraduate course offering specializations in Finance, Marketing, Human Resources, and Operations Management...</p>
+            <button class="toggle-btn" data-target="mba-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="mca">
+            <h2>MCA (Master of Computer Applications)</h2>
+            <p>Master of Computer Applications (MCA) is a postgraduate program that focuses on computer applications, software development, and IT management...</p>
+            <button class="toggle-btn" data-target="mca-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="md">
+            <h2>MD (Doctor of Medicine)</h2>
+            <p>Doctor of Medicine (MD) is a specialized postgraduate course in medical studies for MBBS graduates looking to deepen their knowledge in areas like Pediatrics, General Medicine, and more...</p>
+            <button class="toggle-btn" data-target="md-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="msc">
+            <h2>M.Sc (Master of Science)</h2>
+            <p>Master of Science (M.Sc) is a postgraduate course in science subjects such as Physics, Chemistry, Biology, Mathematics, and Environmental Science...</p>
+            <button class="toggle-btn" data-target="msc-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="mcom">
+            <h2>M.Com (Master of Commerce)</h2>
+            <p>Master of Commerce (M.Com) is a postgraduate degree focused on advanced study in commerce, accounting, finance, and business management...</p>
+            <button class="toggle-btn" data-target="mcom-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="ma">
+            <h2>MA (Master of Arts)</h2>
+            <p>Master of Arts (MA) is a postgraduate degree that offers a wide range of specializations in subjects like English, History, Sociology, Political Science, and Psychology...</p>
+            <button class="toggle-btn" data-target="ma-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="llm">
+            <h2>LLM (Master of Law)</h2>
+            <p>Master of Law (LLM) is a postgraduate degree offering specializations in fields such as Corporate Law, Criminal Law, International Law, and Intellectual Property Rights...</p>
+            <button class="toggle-btn" data-target="llm-modal">Read More</button>
+        </div>
+        
+        <div class="course" id="mpm">
+            <h2>MPM (Master of Public Management)</h2>
+            <p>Master of Public Management (MPM) is a program designed to develop management skills specifically for government and non-governmental sectors, including policy analysis and leadership training...</p>
+            <button class="toggle-btn" data-target="mpm-modal">Read More</button>
+        </div>
+    
+        <div class="course" id="mscdesign">
+            <h2>M.Des (Master of Design)</h2>
+            <p>Master of Design (M.Des) is a postgraduate degree that focuses on creative fields like Fashion Design, Product Design, Interior Design, and more...</p>
+            <button class="toggle-btn" data-target="mscdesign-modal">Read More</button>
+        </div>
+    
+    </section>
+    
+
+
+
+    <div class="modal" id="mtech-modal">
+        <div class="modal-content">
+            <h2><big> M.Tech (Master of Technology) Courses </big></h2>
+
+ 
+            <ul class="subject-list">
+                <div class="subject-row">
+                  <li onclick="toggleContent('cse')">Computer Science and Engineering (CSE)</li>
+                  <li onclick="toggleContent('mech-eng')">Mechanical Engineering</li>
+                </div>
+                <div class="subject-row">
+                  <li onclick="toggleContent('civil-eng')">Civil Engineering</li>
+                  <li onclick="toggleContent('elec-eng')">Electrical Engineering</li>
+                </div>
+                <div class="subject-row">
+                  <li onclick="toggleContent('ece')">Electronics and Communication Engineering</li>
+                  <li onclick="toggleContent('it')">Information Technology</li>
+                </div>
+                <div class="subject-row">
+                  <li onclick="toggleContent('chem-eng')">Chemical Engineering</li>
+                  <li onclick="toggleContent('bio-tech-eng')">Biotechnology Engineering</li>
+                </div>
+                <div class="subject-row">
+                  <li onclick="toggleContent('aero-eng')">Aeronautical Engineering</li>
+                  <li onclick="toggleContent('aero-space-eng')">Aerospace Engineering</li>
+                </div>
+                <div class="subject-row">
+                  <li onclick="toggleContent('thermal-eng')">Thermal Engineering</li>
+                  <li onclick="toggleContent('vlsi')">VLSI Design</li>
+                </div>
+                <div class="subject-row">
+                  <li onclick="toggleContent('ai-ml')">Artificial Intelligence and Machine Learning (AI & ML)</li>
+                  <li onclick="toggleContent('data-science')">Data Science</li>
+                </div>
+                <div class="subject-row">
+                  <li onclick="toggleContent('cybersecurity')">Cybersecurity</li>
+                  <li onclick="toggleContent('power-electronics')">Power Electronics</li>
+                </div>
+              </ul>
+
+
+
+
+              
+              
+              <div id="cse" class="subject-content">
+                <h2><big>Computer Science and Engineering (CSE)</big></h2>
+                <h3>Computer Science and Engineering (CSE) in M.Tech is a postgraduate program that delves deeper into advanced concepts of computing, algorithms, systems, and modern technologies. M.Tech in CSE focuses on various specialized areas to equip students with cutting-edge knowledge and research capabilities.</h3>
+                <div class="sem" id="sem1">
+                    
+                    <h2>Semester 1</h2>
+            
+                    <h4>Semester 1 Subjects:</h4>
+                    <p>In the first semester of M.Tech CSE, the focus is on advanced computer science fundamentals and research methodologies.</p>
+                    <p><b>Advanced Data Structures:</b> Study of complex data structures like AVL trees, B-trees, Fibonacci heaps, and algorithms for graph problems.</p>
+                    <p><b>Advanced Algorithms:</b> Topics include dynamic programming, NP-completeness, approximation algorithms, and randomized algorithms.</p>
+                    <p><b>Mathematical Foundations for Computer Science:</b> Probability theory, linear algebra, and graph theory.</p>
+                    <p><b>Research Methodology:</b> Techniques for conducting computer science research, paper writing, and presenting findings.</p>
+                    <p><b>Elective 1:</b> Subject based on your specialization, such as AI, ML, cybersecurity, etc.</p>
+            
+                    <p><strong>Recommended Reference Books:</strong></p>
+                    <p>Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein</p>
+                    <p>Graph Theory with Applications by Bondy and Murty</p>
+                    <p>Research Methods in Computer Science by Hermann Maurer</p>
+            
+                    <p><strong>YouTube Channels for Semester 1 Subjects:</strong></p>
+                    <p><a href="https://www.youtube.com/user/nptelhrd" target="_blank" rel="noopener noreferrer">NPTEL - National Programme on Technology Enhanced Learning</a></p>
+                    <p><a href="https://www.youtube.com/@CodeWithHarry" target="_blank" rel="noopener noreferrer">Code With Harry</a></p>
+                </div>
+            
+                <div class="sem" id="sem2">
+                    <h2>Semester 2</h2>
+                    <h4>Semester 2 Subjects:</h4>
+                    <p>The second semester advances the understanding of core areas in computer science and specialized subjects.</p>
+                    <p><b>Machine Learning:</b> Supervised, unsupervised learning, neural networks, and support vector machines.</p>
+                    <p><b>Distributed Systems:</b> Concepts of concurrency, consistency, fault tolerance, and distributed algorithms.</p>
+                    <p><b>Advanced Database Management Systems:</b> Query optimization, distributed databases, and data mining techniques.</p>
+                    <p><b>Elective 2:</b> Subject in the area of your specialization (e.g., cloud computing, IoT, etc.)</p>
+            
+                    <p><strong>Recommended Reference Books:</strong></p>
+                    <p>Pattern Recognition and Machine Learning by Christopher Bishop</p>
+                    <p>Distributed Systems by Andrew S. Tanenbaum</p>
+                    <p>Database System Concepts by Silberschatz, Korth, and Sudarshan</p>
+            
+                    <p><strong>YouTube Channels for Semester 2 Subjects:</strong></p>
+                    <p><a href="https://www.youtube.com/@JennyLectures" target="_blank" rel="noopener noreferrer">Jenny's Lectures - CS/IT NET&JRF</a></p>
+                    <p><a href="https://www.youtube.com/@AnujBhaiya" target="_blank" rel="noopener noreferrer">Anuj Bhaiya</a></p>
+                </div>
+            
+                <div class="sem" id="sem3">
+                    <h2>Semester 3</h2>
+                    <h4>Semester 3 Subjects:</h4>
+                    <p>The third semester often involves project work along with elective subjects.</p>
+                    <p><b>Elective 3:</b> Subject based on specialization such as Deep Learning, Cryptography, etc.</p>
+                    <p><b>Project Phase 1:</b> Initial phase of the M.Tech thesis or project work, including literature review and problem formulation.</p>
+            
+                    <p><strong>Recommended Reference Books:</strong></p>
+                    <p>Deep Learning by Ian Goodfellow</p>
+                    <p>Cryptography and Network Security by William Stallings</p>
+            
+                    <p><strong>YouTube Channels for Semester 3 Subjects:</strong></p>
+                    <p><a href="https://www.youtube.com/@KrishNaik" target="_blank" rel="noopener noreferrer">Krish Naik</a></p>
+                    <p><a href="https://www.youtube.com/@GeeksforGeeks" target="_blank" rel="noopener noreferrer">GeeksforGeeks</a></p>
+                </div>
+            
+                <div class="sem" id="sem4">
+                    <h2>Semester 4</h2>
+                    <h4>Semester 4 Subjects:</h4>
+                    <p>The final semester is primarily focused on the thesis or project work.</p>
+                    <p><b>Project Phase 2:</b> Completion of the M.Tech thesis/project with implementation and results.</p>
+                    <p><b>Viva and Thesis Defense:</b> Final oral defense of the thesis or project work.</p>
+            
+                    <p><strong>YouTube Channels for Thesis Guidance:</strong></p>
+                    <p><a href="https://www.youtube.com/@MITOpenCourseWare" target="_blank" rel="noopener noreferrer">MIT OpenCourseWare</a></p>
+                    <p><a href="https://www.youtube.com/@KGPian" target="_blank" rel="noopener noreferrer">KGPian: IIT Kharagpur</a></p>
+                </div>
+
+                <div class="futpath" id="cse-path">
+                    <h2>Future Paths</h2>
+                    <ul>
+                        <p><b>Software Developer:</b> Develop, test, and maintain software applications and systems across industries.</p>
+                        <p><b>Data Scientist:</b> Analyze and interpret complex data sets to drive decision-making in businesses.</p>
+                        <p><b>AI/ML Engineer:</b> Work on designing and implementing artificial intelligence and machine learning models and systems.</p>
+                        <p><b>Cybersecurity Analyst:</b> Ensure the security of IT systems, prevent data breaches, and manage threats.</p>
+                        <p><b>Cloud Solutions Architect:</b> Design and manage cloud-based infrastructure and services.</p>
+                        <p><b>Blockchain Developer:</b> Build decentralized applications and solutions using blockchain technology.</p>
+                    </ul>
+                </div>
+                
+                <div class="preptips" id="cse-tips">
+                    <h2>Preparation Tips</h2>
+                    <ul>
+                        <p><b>Strong Foundation in Programming:</b> Master programming languages such as C++, Java, and Python.</p>
+                        <p><b>Practice Algorithms and Data Structures:</b> Regularly solve problems in data structures and algorithms to sharpen your problem-solving skills.</p>
+                        <p><b>Hands-on Projects:</b> Build projects related to web development, AI/ML, or cloud computing to gain practical experience.</p>
+                        <p><b>Stay Updated with Latest Trends:</b> Follow industry trends like AI, blockchain, and cybersecurity to stay ahead of the curve.</p>
+                        <p><b>Participate in Hackathons:</b> Join coding competitions and hackathons to test your skills and network with industry professionals.</p>
+                        <p><b>Contribute to Open Source:</b> Collaborate on open-source projects to build your portfolio and gain real-world experience.</p>
+                    </ul>
+                </div>
+              </div>
+
+
+
+
+              <div id="mech-eng" class="subject-content">
+                <h2><big>Mechanical Engineering (M.Tech)</big></h2>
+                <h3>M.Tech in Mechanical Engineering is a postgraduate program that offers advanced knowledge in mechanical systems, thermal sciences, and design engineering. The program emphasizes both theoretical concepts and practical applications to prepare students for higher-level roles in industry and research.</h3>
+                
+                <div class="sem" id="sem1">
+                    <h2>Semester 1</h2>
+                    <h4>Semester 1 Subjects:</h4>
+                    <p>The first semester focuses on fundamental mechanical engineering principles and research methodologies.</p>
+                    <p><b>Advanced Thermodynamics:</b> In-depth study of thermodynamic cycles, heat transfer, and energy systems.</p>
+                    <p><b>Advanced Fluid Mechanics:</b> Analysis of complex fluid flow problems, boundary layer theory, and turbulence.</p>
+                    <p><b>Advanced Strength of Materials:</b> Study of stress-strain relationships, failure theories, and material behavior under complex loading.</p>
+                    <p><b>Research Methodology:</b> Techniques for conducting research, literature review, and scientific writing.</p>
+                    <p><b>Elective 1:</b> Subject based on your specialization, such as Computational Fluid Dynamics (CFD), robotics, etc.</p>
+                    
+                    <p><strong>Recommended Reference Books:</strong></p>
+                    <p>Engineering Thermodynamics by P.K. Nag</p>
+                    <p>Fluid Mechanics by Frank M. White</p>
+                    <p>Strength of Materials by Ferdinand L. Singer</p>
+                    <p>Research Methodology in Engineering by G.S. Saini</p>
+                    
+                    <p><strong>YouTube Channels for Semester 1 Subjects:</strong></p>
+                    <p><a href="https://www.youtube.com/@NPTELHRD" target="_blank" rel="noopener noreferrer">NPTEL - National Programme on Technology Enhanced Learning</a></p>
+                    <p><a href="https://www.youtube.com/@LearnEngineering" target="_blank" rel="noopener noreferrer">Learn Engineering</a></p>
+                </div>
+            
+                <div class="sem" id="sem2">
+                    <h2>Semester 2</h2>
+                    <h4>Semester 2 Subjects:</h4>
+                    <p>The second semester deepens understanding of specialized mechanical engineering topics and advanced subjects.</p>
+                    <p><b>Heat Transfer:</b> Study of conduction, convection, and radiation, including heat exchangers and thermal systems.</p>
+                    <p><b>Mechanical Vibrations:</b> Analysis of vibration phenomena, damping, and resonance in mechanical systems.</p>
+                    <p><b>Advanced Manufacturing Processes:</b> Techniques and technologies in modern manufacturing, including additive manufacturing.</p>
+                    <p><b>Elective 2:</b> Subject in the area of your specialization (e.g., Automotive Engineering, Aerospace Engineering, etc.)</p>
+                    
+                    <p><strong>Recommended Reference Books:</strong></p>
+                    <p>Heat Transfer by J.P. Holman</p>
+                    <p>Mechanical Vibrations by S.S. Rao</p>
+                    <p>Manufacturing Processes for Engineering Materials by Serope Kalpakjian</p>
+                    
+                    <p><strong>YouTube Channels for Semester 2 Subjects:</strong></p>
+                    <p><a href="https://www.youtube.com/@MITOpenCourseWare" target="_blank" rel="noopener noreferrer">MIT OpenCourseWare</a></p>
+                    <p><a href="https://www.youtube.com/@EngineeringTutorials" target="_blank" rel="noopener noreferrer">Engineering Tutorials</a></p>
+                </div>
+            
+                <div class="sem" id="sem3">
+                    <h2>Semester 3</h2>
+                    <h4>Semester 3 Subjects:</h4>
+                    <p>The third semester involves project work along with elective subjects, focusing on applying theoretical knowledge.</p>
+                    <p><b>Elective 3:</b> Subject based on specialization such as Thermal Systems, Robotics, etc.</p>
+                    <p><b>Project Phase 1:</b> Initial phase of the M.Tech thesis or project work, including proposal development and literature review.</p>
+                    
+                    <p><strong>Recommended Reference Books:</strong></p>
+                    <p>Robotics: Modelling, Planning and Control by Bruno Siciliano</p>
+                    <p>Advanced Thermodynamics for Engineers by Adrian Bejan</p>
+                    
+                    <p><strong>YouTube Channels for Semester 3 Subjects:</strong></p>
+                    <p><a href="https://www.youtube.com/@JEEPhysics" target="_blank" rel="noopener noreferrer">JEE Physics</a></p>
+                    <p><a href="https://www.youtube.com/@TechMind" target="_blank" rel="noopener noreferrer">TechMind</a></p>
+                </div>
+            
+                <div class="sem" id="sem4">
+                    <h2>Semester 4</h2>
+                    <h4>Semester 4 Subjects:</h4>
+                    <p>The final semester focuses on completing the thesis or project work and defending it.</p>
+                    <p><b>Project Phase 2:</b> Completion of the M.Tech thesis/project, including implementation, results, and final report.</p>
+                    <p><b>Viva and Thesis Defense:</b> Final oral defense of the thesis or project work.</p>
+                    
+                    <p><strong>YouTube Channels for Thesis Guidance:</strong></p>
+                    <p><a href="https://www.youtube.com/@ResearchGate" target="_blank" rel="noopener noreferrer">ResearchGate</a></p>
+                    <p><a href="https://www.youtube.com/@IITMadras" target="_blank" rel="noopener noreferrer">IIT Madras</a></p>
+                </div>
+            
+                <div class="futpath" id="mech-path">
+                    <h2>Future Paths</h2>
+                    <ul>
+                        <p><b>Design Engineer:</b> Work on designing mechanical systems and products, including CAD modeling and simulation.</p>
+                        <p><b>Thermal Engineer:</b> Specialize in energy systems, heat exchangers, and thermal management solutions.</p>
+                        <p><b>Manufacturing Engineer:</b> Focus on improving manufacturing processes, production efficiency, and quality control.</p>
+                        <p><b>Automotive Engineer:</b> Design and develop automotive systems and components, including vehicle dynamics and performance.</p>
+                        <p><b>Aerospace Engineer:</b> Work on the design and development of aircraft and spacecraft systems.</p>
+                        <p><b>Research Scientist:</b> Conduct research in advanced mechanical engineering topics and contribute to scientific advancements.</p>
+                    </ul>
+                </div>
+                
+                <div class="preptips" id="mech-tips">
+                    <h2>Preparation Tips</h2>
+                    <ul>
+                        <p><b>Strong Foundation in Core Subjects:</b> Master fundamental concepts in thermodynamics, fluid mechanics, and strength of materials.</p>
+                        <p><b>Hands-on Experience:</b> Gain practical experience through internships, lab work, and projects related to mechanical engineering.</p>
+                        <p><b>Stay Updated with Industry Trends:</b> Follow advancements in manufacturing technologies, robotics, and renewable energy.</p>
+                        <p><b>Participate in Competitions:</b> Join engineering competitions and challenges to enhance problem-solving skills and creativity.</p>
+                        <p><b>Networking:</b> Connect with professionals in the field through conferences, seminars, and online forums.</p>
+                        <p><b>Research and Publication:</b> Engage in research activities and publish your work in journals and conferences to build your academic profile.</p>
+                    </ul>
+                </div>
+            </div>
+            
+            
+                <button class="close-btn">Close</button>
+            </div>
+    </div>
+            
+
+
+
+
+
+
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Career Pathways is dedicated to helping students explore educational and career opportunities. Our goal is to guide you through your journey after school and beyond.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../HTML/way.html">Home</a></li>
+                    <li><a href="../HTML/courses.html">Courses</a></li>
+                    <li><a href="../HTML/govtjobs.html">Government Jobs</a></li>
+                    <li><a href="../HTML/careers.html">Careers</a></li>
+                    <li><a href="../HTML/roadmap.html">Road Maps</a></li>
+                    <li><a href="../HTML/interview.html">Interview Questions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"><img src="../IMAGES/face.png" alt="Facebook"></a>
+                    <a href="https://x.com/"><img src="../IMAGES/twi.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/"><img src="../IMAGES/insta.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/login?fromSignIn=true"><img src="../IMAGES/link.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+   <script src="shankar.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="cse" class="subject-content">
+    <h2><big>Computer Science and Engineering (CSE)</big></h2>
+    <h3>Computer Science and Engineering (CSE) in M.Tech is a postgraduate program that delves deeper into advanced concepts of computing, algorithms, systems, and modern technologies. M.Tech in CSE focuses on various specialized areas to equip students with cutting-edge knowledge and research capabilities.</h3>
+    <div class="sem" id="sem1">
+        
+        <h2>Semester 1</h2>
+
+        <h4>Semester 1 Subjects:</h4>
+        <p>In the first semester of M.Tech CSE, the focus is on advanced computer science fundamentals and research methodologies.</p>
+        <p><b>Advanced Data Structures:</b> Study of complex data structures like AVL trees, B-trees, Fibonacci heaps, and algorithms for graph problems.</p>
+        <p><b>Advanced Algorithms:</b> Topics include dynamic programming, NP-completeness, approximation algorithms, and randomized algorithms.</p>
+        <p><b>Mathematical Foundations for Computer Science:</b> Probability theory, linear algebra, and graph theory.</p>
+        <p><b>Research Methodology:</b> Techniques for conducting computer science research, paper writing, and presenting findings.</p>
+        <p><b>Elective 1:</b> Subject based on your specialization, such as AI, ML, cybersecurity, etc.</p>
+
+        <p><strong>Recommended Reference Books:</strong></p>
+        <p>Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein</p>
+        <p>Graph Theory with Applications by Bondy and Murty</p>
+        <p>Research Methods in Computer Science by Hermann Maurer</p>
+
+        <p><strong>YouTube Channels for Semester 1 Subjects:</strong></p>
+        <p><a href="https://www.youtube.com/user/nptelhrd" target="_blank" rel="noopener noreferrer">NPTEL - National Programme on Technology Enhanced Learning</a></p>
+        <p><a href="https://www.youtube.com/@CodeWithHarry" target="_blank" rel="noopener noreferrer">Code With Harry</a></p>
+    </div>
+
+   
+
+    
+    <div class="futpath" id="cse-path">
+        <h2>Future Paths</h2>
+        <ul>
+            <p><b>Software Developer:</b> Develop, test, and maintain software applications and systems across industries.</p>
+            <p><b>Data Scientist:</b> Analyze and interpret complex data sets to drive decision-making in businesses.</p>
+            <p><b>AI/ML Engineer:</b> Work on designing and implementing artificial intelligence and machine learning models and systems.</p>
+            <p><b>Cybersecurity Analyst:</b> Ensure the security of IT systems, prevent data breaches, and manage threats.</p>
+            <p><b>Cloud Solutions Architect:</b> Design and manage cloud-based infrastructure and services.</p>
+            <p><b>Blockchain Developer:</b> Build decentralized applications and solutions using blockchain technology.</p>
+        </ul>
+    </div>
+    
+    <div class="preptips" id="cse-tips">
+        <h2>Preparation Tips</h2>
+        <ul>
+            <p><b>Strong Foundation in Programming:</b> Master programming languages such as C++, Java, and Python.</p>
+            <p><b>Practice Algorithms and Data Structures:</b> Regularly solve problems in data structures and algorithms to sharpen your problem-solving skills.</p>
+            <p><b>Hands-on Projects:</b> Build projects related to web development, AI/ML, or cloud computing to gain practical experience.</p>
+            <p><b>Stay Updated with Latest Trends:</b> Follow industry trends like AI, blockchain, and cybersecurity to stay ahead of the curve.</p>
+            <p><b>Participate in Hackathons:</b> Join coding competitions and hackathons to test your skills and network with industry professionals.</p>
+            <p><b>Contribute to Open Source:</b> Collaborate on open-source projects to build your portfolio and gain real-world experience.</p>
+        </ul>
+    </div>
+  </div>
+  <button class="close-btn">Close</button>
+</div>
+</div>
