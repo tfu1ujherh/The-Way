@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Comment Section</title>
+        <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
+
+		<link
+			rel="stylesheet"
+			href="../CSS/query.css" />
+	</head>
+	<body>
+
+        <header class="navbar">
+            <div class="logo">
+                <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="way.html">Home</a></li>
+    
+                  
+                    <!-- Courses Dropdown -->
+                    <li class="dropdown">
+                        <a href="courses.html">Courses & Careers</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="courses.html">Courses</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
+                                    <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
+                                    <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="careers.html">Careers</a></li>
+                            
+                            <!-- Government Jobs Dropdown -->
+                            <li class="dropdown-submenu">
+                                <a href="govtjobs.html">Government Jobs</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="#">Government Jobs after 10th</a></li>
+                                    <li><a href="#">Government Jobs after 12th</a></li>
+                                    <li><a href="#">Government Jobs after Diploma</a></li>
+    
+                                    <li><a href="#">Government Jobs after Graduation</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+    
+    
+                    <!-- Road Maps Dropdown -->
+                    <li class="dropdown">
+                        <a href="roadmap.html">Road Maps</a>
+                        <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
+                                <!-- Role Based Roadmaps Dropdown -->
+                                    <li><a href="#">Role Based Roadmaps</a></li>
+                                    
+                                <!-- Skill Based Roadmaps Dropdown -->
+                                    <li><a href="#">Skill Based Roadmaps</a></li>
+                            </ul>
+                        </ul>
+                    </li>
+    
+                    <!-- Interview Questions Dropdown -->
+                    <li class="dropdown">
+                        <a href="interview.html">Interview Questions</a>
+                        <ul class="dropdown-menu">
+                            <!-- Technical Jobs Dropdown -->
+                               <li> <a href="#">Technical</a></li>
+                            <!-- Non Technical Jobs Dropdown -->
+                               <li> <a href="#">Non-Technical</a></li>
+                               
+                            <li><a href="faq.html">Q&A</a></li> 
+                        </ul>
+                    </li>
+    
+                    <li><a href="query.html">Queries</a></li>
+    
+                    <li><a href="login.html">Login & SignUp</a></li>
+    
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <button class="search-btn">Go</button>
+            </div>
+        </header>
+
+		 <div class="comment-section">
+			<h1>Query Section</h1>
+			<form id="comment-form">
+				<textarea
+					id="comment-input"
+					placeholder="Enter your comment here..."
+					required></textarea>
+				<button type="submit">Submit</button>
+			</form>
+
+			<div id="comments-container">
+				<h2>All Quiries:</h2>
+				<ul id="comments-list"></ul>
+			</div>
+		</div> 
+
+		<script src="../JS/query.js"></script>
+	</body>
+</html>

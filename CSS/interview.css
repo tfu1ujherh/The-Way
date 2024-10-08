@@ -1,27 +1,48 @@
-/* General Body */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
     box-sizing: border-box;
+    background-color: #f4f4f4;
     overflow-x: hidden;
+ 
 }
+body { 
+    text-decoration: none; 
+  } 
+  body:visited { 
+    text-decoration: none; 
+  } 
+  body:hover { 
+    text-decoration: none; 
+  } 
+  body:active { 
+    text-decoration: none; 
+  }
+
 
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    padding: 0.2rem;
+    background-color:black;
+    padding: 0.3rem;
     transition: background-color 0.3s ease;
+    position: sticky; /* Or fixed depending on your design */
+    top: 0px;
+    z-index: 999; /* High z-index ensures it appears on top of other content */
+    height: 72px; /* Decreasing the height of the navbar */
+
 }
 
 /* Logo */
 .navbar .logo {
     color: #fff;
     font-size: 1.5rem;
+    
 }
 
 /* Navigation Links */
@@ -34,6 +55,7 @@ body {
 
 .nav-links li {
     margin-right: 1.5rem;
+    
 }
 
 .nav-links a {
@@ -46,6 +68,83 @@ body {
     color: #ff5722; /* Change color on hover */
 }
 
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* min-width: 150px; */
+    width:250px ;
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Sub Dropdown Styling */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+    border-radius: 8px;
+
+}
+
+.dropdown-submenu-menu li {
+    width: 100%;
+}
+
+.dropdown-submenu-menu li a {
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-submenu-menu li a:hover {
+    background-color: #666;
+}
+
+/* Show sub-dropdown on hover */
+.dropdown-submenu:hover .dropdown-submenu-menu {
+    display: block;
+}
+
+
 /* Search Container */
 .search-container {
     display: flex;
@@ -54,12 +153,11 @@ body {
 
 /* Search Bar */
 .search-bar {
-    padding: 0.5rem;
+    padding: 0.5rem ;
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: border-color 0.3s ease;
     margin-right: 2px;
-
 }
 
 .search-bar:focus {
@@ -82,193 +180,651 @@ body {
     transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Times New Roman', Times, serif,;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+
+  .carousel-slides {
+    display: flex; /* Align slides in a row */
+    animation: scroll 10s linear infinite; /* Continuous scrolling */
+  }
+  
+  
 /* Image Banner */
-.image-banner {
-    text-align: center; /* Center align the image */
-    margin: 20px 0; /* Add some space around the image */
-    position: sticky;
+.image-banner1 {
+    position: relative;
+    text-align: center;
+    margin: 0;
 }
 
-.image-banner img {
-    max-width: 100%; /* Ensure the image scales with the width of the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: Add some border radius */
+.image-banner1 img {
+    width: 99vw;
+    height: 90vh;
+    object-fit: fill;
+    z-index: 1; /* Lower z-index than the navbar */
+    /* filter: blur(1px); Apply blur effect; adjust the value as needed */
 }
+
+
+  
+  /* Text Overlay */
+  .banner-text1 {
+    position: absolute; /* Allows positioning relative to the parent (image-banner) */
+    top: 0%; /* Position vertically in the middle */
+    left: 0%; /* Position horizontally in the middle */
+    right: 43%;
+    /* transform: translate(-50%, -50%); Adjust the text to be perfectly centered */
+    color: black; /* Set text color */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .banner-text1 h1 {
+    font-size: 72px; /* Adjust font size for the title */
+    margin-bottom: 0; /* Removes bottom margin of the h1 */
+    padding-bottom: 10px; /* Removes any padding if present */
+    margin-bottom: 260px;
+  }
+  
+  .banner-text1 h2 {
+    margin-left: 550px;
+    margin-bottom: 1px;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 20px; /* Adjust font size for the description */
+  }
+  
+  /* Button Styling */
+  .banner-text1 button {
+    margin-left: 550px;
+    margin-top: 1px;
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  /* Hover Effect */
+  .banner-text1 button:hover {
+    background-color: gray; /* Change color on hover */
+    transform: scale(1.1); /* Scale up slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deepen the shadow */
+  }
+  
+  /* Keyframe Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Apply animation on load */
+  .banner-text1 button {
+    animation: pulse 3s infinite; /* Pulse animation repeats every 3 seconds */
+  }
+  
+
+
+
+
+
+
+
+  /* Image Banner */
+.image-banner2 {
+    margin-left: 50%; /* Adjust the left margin as needed */
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.image-banner2 img {
+    width: 98.8vw;
+    height: 90vh;
+    object-fit: fill;
+    z-index: 1;
+    /* filter: blur(1px); Applyblur effect; adjust the value as needed */
+
+}
+  
+  /* Text Overlay */
+  .banner-text2 {
+    position: absolute; /* Allows positioning relative to the parent (image-banner) */
+    top: 5%; /* Position vertically in the middle */
+    left: 35%; /* Position horizontally in the middle */
+    right: 1%;
+    /* transform: translate(-50%, -50%); Adjust the text to be perfectly centered */
+    color: black; /* Set text color */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .banner-text2 h1 {
+    font-size: 60px; /* Adjust font size for the title */
+    margin-bottom: 0; /* Removes bottom margin of the h1 */
+    padding-bottom: 10px; /* Removes any padding if present */
+  }
+  
+  .banner-text2 h2 {
+    margin-left:60%;
+    padding-top: 0px;
+    margin-top: 20px;
+    margin-right: 2%;
+    font-size: 20px; /* Adjust font size for the description */
+    margin-bottom: 30px;
+  }
+
+
+ 
+
+  
+  /* Button Styling */
+  .banner-text2 button {
+    margin-top: 0%;
+    margin-left: 60%;
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  /* Hover Effect */
+  .banner-text2 button:hover {
+    background-color: gray; /* Change color on hover */
+    transform: scale(1.1); /* Scale up slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deepen the shadow */
+  }
+  
+  /* Keyframe Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Apply animation on load */
+  .banner-text2 button {
+    animation: pulse 3s infinite; /* Pulse animation repeats every 3 seconds */
+  }
+  
+
+
+
+
+
+
+
+
+
+  /* Image Banner */
+.image-banner3 {
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.image-banner3 img {
+    width: 98.9vw;
+    height: 90vh;
+    object-fit: fill;
+    z-index: 1;
+     /* Lower z-index than the navbar */
+}
+  
+  /* Text Overlay */
+  .banner-text3 {
+    position: absolute; /* Allows positioning relative to the parent (image-banner) */
+    top: 0%; /* Position vertically in the middle */
+    left: 10%; /* Position horizontally in the middle */
+    right: 10%;
+    /* transform: translate(-50%, -50%); Adjust the text to be perfectly centered */
+    color: black; /* Set text color */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .banner-text3 h1 {
+    
+    font-size: 65px; /* Adjust font size for the title */
+    margin-bottom: 0; /* Removes bottom margin of the h1 */
+    padding-bottom: 0px; /* Removes any padding if present */
+    margin-bottom: 410px;
+   
+  }
+  
+
+  
+  .banner-text3 h2 {
+    padding-top: 0px;
+    /* margin-top: 20px; */
+    margin-right: 80%;
+    font-size: 20px; /* Adjust font size for the description */
+    margin-left: 1px;
+    margin-bottom: -70px;
+    width: 300px;
+
+  }
+
+
+  .banner-text3 h3 {
+    left: 50px;
+    margin-left: 75%;
+    /* padding: 12px 24px; Padding for the button */
+    font-size: 16px; /* Font size */
+    margin-right: 2px;
+    margin-bottom: -30px;
+
+  }
+  
+  /* Button Styling */
+  .banner-text3 button {
+    margin-left: 1%;
+    margin-top: 1px;
+
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  /* Hover Effect */
+  .banner-text3 button:hover {
+    background-color: gray; /* Change color on hover */
+    transform: scale(1.1); /* Scale up slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deepen the shadow */
+  }
+  
+  /* Keyframe Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Apply animation on load */
+  .banner-text3 button {
+    animation: pulse 3s infinite; /* Pulse animation repeats every 3 seconds */
+  }
+  
+
+
+
+
+
+
+
+
+  /* Image Banner */
+.image-banner4 {
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.image-banner4 img {
+    width: 100vw;
+    height: 90vh;
+    object-fit: fill;
+    z-index: 1;
+}
+  
+  /* Text Overlay */
+  .banner-text4 {
+    position: absolute; /* Allows positioning relative to the parent (image-banner) */
+    top: 2%; /* Position vertically in the middle */
+    left: 10%; /* Position horizontally in the middle */
+    color: black; /* Set text color */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+  
+  .banner-text4 h1 {
+    font-size: 60px; /* Adjust font size for the title */
+    margin-bottom: 0; /* Removes bottom margin of the h1 */
+    padding-bottom: 10px; /* Removes any padding if present */
+    margin-bottom: 115px;
+  }
+  
+  .banner-text4 h2 {
+    margin-bottom: 220px;
+    padding-top: 0px;
+    margin-left: 37%;
+    margin-top: 0px;
+    font-size: 20px; /* Adjust font size for the description */
+    width: 400px;
+  }
+  
+  /* Button Styling */
+  .banner-text4 button {
+    margin-left: 10%;
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  /* Hover Effect */
+  .banner-text4 button:hover {
+    background-color: gray; /* Change color on hover */
+    transform: scale(1.1); /* Scale up slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deepen the shadow */
+  }
+  
+  /* Keyframe Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Apply animation on load */
+  .banner-text4 button {
+    animation: pulse 3s infinite; /* Pulse animation repeats every 3 seconds */
+  }
+  
+
+
+
+  .prev-button,
+.next-button {
+  position: absolute; /* Position buttons over the carousel */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for button height */
+  background-color: rgba(0, 0, 0, 0.5); /* Button background */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px; /* Button padding */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.prev-button {
+  left: 10px; /* Position to the left */
+}
+
+.next-button {
+  right: 10px; /* Position to the right */
+}
+
+
+
 
 
 /* Hero Section */
 .hero {
-    margin-top: 100px;
-    background-color: #e3e3e3;
-    padding: 50px 20px;
-    text-align: center;
-    animation: slideIn 1s ease-out; /* Slide-in animation */
+  margin-top: 100px;
+  background: #F3A953;
+
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out; 
+  border-radius: 8px;
+  font-size: 20px;
+  margin-left:30px;
+  margin-right: 30px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-/* Course Details */
-.topic-details {
-    padding: 2rem;
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 45px; 
+  padding: 20px;
 }
 
-/* Course */
-.topic {
-    margin-bottom: 2rem;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgb(193, 235, 212);
+/*----------------------------------------------------------------------*/
+.course {
+ 
+  background-color: #90e0ef;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  text-align: center; 
+
 }
 
-.topic:hover {
-    transform: scale(1.03); /* Slightly enlarge course container on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+.course:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
+
+
+@media (max-width: 768px) {
+  section {
+      grid-template-columns: 1fr; 
+  }
+}
+
+
+/* .course-info {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.course-info.active {
+  display: block;
+  opacity: 1; 
+}
+
+
+.course-info h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333; 
+}
+
+
+.course-info ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left; 
+} */
+/*----------------------------------------------------------------------------------*/
 /* Toggle Button */
 .toggle-btn {
-    background-color: #ff5722;
-    color: #fff;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #ff5722; 
+  color: white;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  margin-top: 15px;
+  outline: none;
 }
 
 .toggle-btn:hover {
-    background-color: #e64a19; /* Slightly different hover color */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+  background-color: #e64a19; 
+  transform: scale(1.05); 
 }
-
-/* Course Info */
-.topic-info {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.topic-info.active {
-    display: block;
-    opacity: 1;
-}
-
+/*-----------------------------------------------------------------------------------*/
 /* Footer */
 .footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
 }
 
 .footer-section h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .footer-section p, .footer-section ul {
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    line-height: 1.8;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.8;
 }
 
 .footer-section ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .footer-section ul li a {
-    color: #bdc3c7;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: white;
+  color: white;
 }
 
 .social-icons a img {
-    width: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease-in-out;
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .social-icons a img:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #34495e;
-    padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #34495e;
+  padding-top: 20px;
 }
 
 .footer-bottom p {
-    font-size: 0.9em;
-    margin: 0;
-    color: #95a5a6;
+  font-size: 0.9em;
+  margin: 0;
+  color: #95a5a6;
 }
 
 .footer .footer-container, .footer .footer-bottom {
-    animation: fadeInUp 0.8s ease-in-out;
+  animation: fadeInUp 0.8s ease-in-out;
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 
 /* Keyframe Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }

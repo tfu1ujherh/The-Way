@@ -3,26 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Courses</title>
+    <title>Courses</title>
     <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/courses.css">
 </head>
 <body>
     <header class="navbar">
-        <div class="logo" > <a href="way.html"><img src="../IMAGES/white.png" alt="" height="60px",width="60px" ></a> </div>
+        <div class="logo">
+            <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="way.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="govtjobs.html">Government Jobs</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="roadmap.html">Road Maps</a></li>
-                <li><a href="interview.html">Interview Questions</a></li>
-                <li><a href="roadhtml">Q&A </a></li>
+
+              
+                <!-- Courses Dropdown -->
+                <li class="dropdown">
+                    <a href="courses.html">Courses & Careers</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="courses.html">Courses</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
+                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
+                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="careers.html">Careers</a></li>
+                        
+                        <!-- Government Jobs Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a href="govtjobs.html">Government Jobs</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="#">Government Jobs after 10th</a></li>
+                                <li><a href="#">Government Jobs after 12th</a></li>
+                                <li><a href="#">Government Jobs after Diploma</a></li>
+
+                                <li><a href="#">Government Jobs after Graduation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
 
+                <!-- Road Maps Dropdown -->
+                <li class="dropdown">
+                    <a href="roadmap.html">Road Maps</a>
+                    <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
+                            <!-- Role Based Roadmaps Dropdown -->
+                                <li><a href="#">Role Based Roadmaps</a></li>
+                                
+                            <!-- Skill Based Roadmaps Dropdown -->
+                                <li><a href="#">Skill Based Roadmaps</a></li>
+                        </ul>
+                    </ul>
+                </li>
 
+                <!-- Interview Questions Dropdown -->
+                <li class="dropdown">
+                    <a href="interview.html">Interview Questions</a>
+                    <ul class="dropdown-menu">
+                        <!-- Technical Jobs Dropdown -->
+                           <li> <a href="#">Technical</a></li>
+                        <!-- Non Technical Jobs Dropdown -->
+                           <li> <a href="#">Non-Technical</a></li>
+                           
+                        <li><a href="faq.html">Q&A</a></li> 
+                    </ul>
+                </li>
 
+                <li><a href="query.html">Queries</a></li>
+
+                <li><a href="login.html">Login & SignUp</a></li>
 
             </ul>
         </nav>
@@ -32,43 +85,50 @@
         </div>
     </header>
 
-    <section class="image-banner">
-        <img src="../IMAGES/img5.png" alt="Banner Image" width="500" height="500">
+
+    <section id="carousel">
+        <div class="carousel-container">
+            <img id="carouselImage" src="../IMAGES/banner_1.png" alt="Carousel Image">
+        </div>
     </section>
 
-    <section class="hero">
-        <h1>Courses</h1>
-        <p>Your guide to educational and career opportunities after school and beyond.</p>
-    </section>
+    <div class="button-container">
+        <p class="button-text">Paving a path for your Bright future</p>
+    </div>
 
-    <section class="cards-section">
-        <div class="card">
-            <h2>Courses After 10th</h2>
-            <p>Explore different streams, vocational courses, and integrated programs available after 10th grade.</p>
-            <a href="../Courses/10thcourses.html" class="btn" >Learn More</a>
-        </div>
-        <div class="card">
-            <h2>Courses After 12th</h2>
-            <p>Detailed career options based on different streams and professional courses after 12th grade.</p>
-            <a href="../Courses/12thcourses.html" class="btn"  >Learn More  </a>
-        </div>
-        <div class="card">
-            <h2>Courses After Under Graduation</h2>
-            <p>Detailed career options based on different streams and professional courses after Under Graduation.</p>
-            <a href="../Courses/graduation.html" class="btn" >Learn More</a>
-        </div>
-        
-        
-    </section>
+    <div class="image-container">
+        <img src="../IMAGES/sun.webp" alt="Sun image" class="sun-image">
+    </div>
 
-
-    
+    <div class="container">
+        <div class="box">
+            <div class="box-content">
+                <h1>After 10th Class</h1>
+                <h5>Career Counseling Services for Class 10th students contain Stream Selection, Career option Exploration, and everything a Class 10th student needs to gain confidence.</h5>
+                <a href="../Courses/10thcourses.html" class="box-btn">Explore Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h1>After 12th Grade</h1>
+                <h5>Career Counseling Services for 11th & 12th students contain exploration of career options, colleges, competitive exams, and admission assistance.</h5>
+                <a href="../Courses/12thcourses.html" class="box-btn">Explore Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h1>After Graduation</h1>
+                <h5>Get detailed information on top colleges in India and admission news. Get alerts for results, cutoffs, and forms for top entrance, government, and banking exams.</h5>
+                <a href="../Courses/graduation.html" class="box-btn">Explore Now</a>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Career Pathways is dedicated to helping students explore educational and career opportunities. Our goal is to guide you through your journey after school and beyond.</p>
+                <h3><a href="contact.html" style="text-decoration: none; color: inherit;">Contact Us</a></h3>
+                <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We’re here to help guide you through your educational and career journey. You can contact us via email, phone.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -95,7 +155,7 @@
             <p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
     <script src="../JS/courses.js"></script>
 </body>
 </html>

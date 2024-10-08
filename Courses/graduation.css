@@ -6,23 +6,43 @@ body {
     box-sizing: border-box;
     background-color: #f4f4f4;
     overflow-x: hidden;
+ 
 }
+body { 
+    text-decoration: none; 
+  } 
+  body:visited { 
+    text-decoration: none; 
+  } 
+  body:hover { 
+    text-decoration: none; 
+  } 
+  body:active { 
+    text-decoration: none; 
+  }
+
 
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color:black;
     padding: 0.2rem;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    transition: background-color 0.3s ease;
+    position: sticky; /* Or fixed depending on your design */
+    top: 0px;
+    z-index: 999; /* High z-index ensures it appears on top of other content */
 }
 
+/* Logo */
 .navbar .logo {
     color: #fff;
     font-size: 1.5rem;
+    
 }
 
+/* Navigation Links */
 .nav-links {
     list-style-type: none;
     margin: 0;
@@ -32,37 +52,116 @@ body {
 
 .nav-links li {
     margin-right: 1.5rem;
+    
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ff5722; /* Change color on hover */
 }
 
-/* Search Bar */
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* min-width: 150px; */
+    width:250px ;
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Sub Dropdown Styling */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+    border-radius: 8px;
+
+}
+
+.dropdown-submenu-menu li {
+    width: 100%;
+}
+
+.dropdown-submenu-menu li a {
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-submenu-menu li a:hover {
+    background-color: #666;
+}
+
+/* Show sub-dropdown on hover */
+.dropdown-submenu:hover .dropdown-submenu-menu {
+    display: block;
+}
+
+
+/* Search Container */
 .search-container {
     display: flex;
     align-items: center;
 }
 
+/* Search Bar */
 .search-bar {
     padding: 0.5rem;
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    transition: border-color 0.3s ease;
     margin-right: 2px;
-
 }
 
 .search-bar:focus {
     border-color: #ff5722; /* Change border color on focus */
 }
 
+/* Search Button */
 .search-btn {
     padding: 0.5rem 1rem;
     background-color: #ff5722;
@@ -70,7 +169,7 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for background color and transform */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .search-btn:hover {
@@ -79,20 +178,96 @@ body {
 }
 
 
+
+
+
+
+
 /* Image Banner */
 .image-banner {
-    top: 0px;
     position: relative;
     text-align: center;
     margin: 0;
 }
 
 .image-banner img {
-    width: 100%;
-    height: 690px;
-    object-fit: cover;
-    z-index: 1; /* Lower z-index than the navbar */
+    width: 100vw;
+    height: 90vh;
+    object-fit: fill;
+    z-index: 1;
+     /* Lower z-index than the navbar */
 }
+
+
+/* Text Overlay */
+.banner-text {
+    position: absolute; /* Allows positioning relative to the parent (image-banner) */
+    top: 30%; /* Position vertically in the middle */
+    left: 32%; /* Position horizontally in the middle */
+    transform: translate(-50%, -50%); /* Adjust the text to be perfectly centered */
+    color: black; /* Set text color */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.banner-text h1 {
+    font-size: 72px; /* Adjust font size for the title */
+    margin-bottom: 0; /* Removes bottom margin of the h1 */
+    padding-bottom: 10px; /* Removes any padding if present */
+}
+
+.banner-text p {
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 20px; /* Adjust font size for the description */
+}
+
+
+/* Button Styling */
+.banner-text button {
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover Effect */
+.banner-text button:hover {
+    background-color: gray; /* Change color on hover */
+    transform: scale(1.1); /* Scale up slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deepen the shadow */
+}
+
+/* Keyframe Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Apply animation on load */
+.banner-text button {
+    animation: pulse 3s infinite; /* Pulse animation repeats every 2 seconds */
+}
+
+
+
 
 
 /* Hero Section */
@@ -432,7 +607,7 @@ body.modal-open {
 /* Styling for the list items */
 li {
     cursor: pointer;
-    color: blue;
+    color: black;
     text-decoration: none;
 }
 
@@ -505,7 +680,23 @@ li.active {
 }
 
 
+#backButton {
+    margin-left: 47%;
+    margin-top: 2%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(233, 241, 222);
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
+#backButton:hover {
+    background-color: rgb(200, 230, 200); /* Slightly darker shade on hover */
+    color: white; /* Change text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
 
 
 
@@ -606,5 +797,244 @@ li.active {
     }
     to {
         opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktops and Larger Screens (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .course {
+        width: calc(33.33% - 20px); /* Three courses per row on larger screens */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Larger heading on big screens */
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .footer-section {
+        margin-bottom: 15px; /* Adjust spacing in footer */
+    }
+}
+
+/* Small Laptops and Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .course {
+        width: calc(50% - 20px); /* Two courses per row */
+    }
+
+    .navbar {
+        padding: 10px 20px; /* Reduced padding on smaller screens */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Slightly smaller nav text */
+    }
+
+    .footer-section {
+        flex: 1 1 45%; /* Adjust the width of footer sections */
+    }
+}
+
+/* Medium Tablets and Landscape Phones (max-width: 900px) */
+@media (max-width: 900px) {
+    .course {
+        width: 100%; /* Full width courses on medium tablets */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem; /* Adjust footer heading size */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .search-bar {
+        width: 80%; /* Expand the search bar */
+    }
+}
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Ensure full-width layout for courses */
+    .course {
+        width: 100%; /* Full width for courses */
+        margin-bottom: 20px;
+        padding: 15px;
+        box-sizing: border-box; /* Include padding and borders in width calculation */
+    }
+
+    /* Navbar adjustments for smaller screens */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        display: none; /* Hide the links by default on mobile */
+        flex-direction: column;
+        width: 100%; /* Full-width for nav items */
+        text-align: left; /* Align text to the left */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px; /* Space between nav links */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Increase readability */
+        padding: 10px 0;
+        display: block;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px; /* Space out the search bar */
+    }
+
+    /* Hero Section Adjustments */
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust hero title size */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust hero paragraph size */
+    }
+
+    /* Footer for mobile */
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem; /* Adjust footer heading size */
+    }
+
+    .footer-section ul {
+        padding-left: 0;
+    }
+
+    .footer-section ul li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
+    
+    /* Modal adjustments for better readability */
+    .modal-content {
+        padding: 15px;
+        width: 90%; /* Make modal content take most of the screen width */
+        max-width: 400px;
+    }
+
+    /* Buttons */
+    .toggle-btn,
+    .close-btn {
+        width: 100%; /* Full width for buttons */
+        padding: 12px;
+        font-size: 1rem; /* Larger font for buttons */
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Search bar adjustments */
+    .search-bar {
+        width: 80%; /* Adjust width for mobile */
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        width: 20%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Adjust hero for small mobile screens */
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Smaller footer text */
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section ul li {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
     }
 }

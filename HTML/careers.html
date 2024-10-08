@@ -9,16 +9,74 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo"><a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a></div>
+        <div class="logo">
+            <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="way.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="govtjobs.html">Government Jobs</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="roadmap.html">Road Maps</a></li>
-                <li><a href="interview.html">Interview Questions</a></li>
-                <li><a href="rap.html">Q&A </a></li>
+
+              
+                <!-- Courses Dropdown -->
+                <li class="dropdown">
+                    <a href="courses.html">Courses & Careers</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="courses.html">Courses</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
+                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
+                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="careers.html">Careers</a></li>
+                        
+                        <!-- Government Jobs Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a href="govtjobs.html">Government Jobs</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="#">Government Jobs after 10th</a></li>
+                                <li><a href="#">Government Jobs after 12th</a></li>
+                                <li><a href="#">Government Jobs after Diploma</a></li>
+
+                                <li><a href="#">Government Jobs after Graduation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Road Maps Dropdown -->
+                <li class="dropdown">
+                    <a href="roadmap.html">Road Maps</a>
+                    <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
+                            <!-- Role Based Roadmaps Dropdown -->
+                                <li><a href="#">Role Based Roadmaps</a></li>
+                                
+                            <!-- Skill Based Roadmaps Dropdown -->
+                                <li><a href="#">Skill Based Roadmaps</a></li>
+                        </ul>
+                    </ul>
+                </li>
+
+                <!-- Interview Questions Dropdown -->
+                <li class="dropdown">
+                    <a href="interview.html">Interview Questions</a>
+                    <ul class="dropdown-menu">
+                        <!-- Technical Jobs Dropdown -->
+                           <li> <a href="#">Technical</a></li>
+                        <!-- Non Technical Jobs Dropdown -->
+                           <li> <a href="#">Non-Technical</a></li>
+                           
+                        <li><a href="faq.html">Q&A</a></li> 
+                    </ul>
+                </li>
+
+                <li><a href="query.html">Queries</a></li>
+
+                <li><a href="login.html">Login & SignUp</a></li>
+
             </ul>
         </nav>
         <div class="search-container">
@@ -27,9 +85,53 @@
         </div>
     </header>
 
-    <section class="image-banner">
-        <img src="../IMAGES/img3.jpg"  alt="Banner Image" style="width: 1000px; height:600px">
-    </section>
+    <div class="carousel-container">
+        <div class="carousel-slides">
+          <div class="image-banner1">
+            <img src="../IMAGES/career1.jpg" alt="Slide 1">
+            <div class="banner-text1">
+              <h1>From Dreams to Reality Your Career Adventure Begins</h1>
+              <h2>Every great achievement begins with a single step, take that step today toward the career of your dreams.</h2>
+              <button>Explore</button>
+            </div>
+          </div>
+          <div class="image-banner2">
+            <img src="../IMAGES/career6.png" alt="Slide 2">
+            <div class="banner-text2">
+              <h1>From Confusion to Clarity Your Career Journey Starts Here!</h1>
+              <h2>Your journey may be filled with uncertainty, but remember every step you take brings you closer to your dreams.</h2>
+              <h3><big>Your career is your journey take every step with purpose,
+                and let passion drive you towards your ultimate goals.</big></h3>
+              <button>Explore</button>
+            </div>
+          </div>
+          <div class="image-banner3">
+            <img src="../IMAGES/career2.jpg" alt="Slide 3">
+            <div class="banner-text3">
+              <h1>Rise Above the Noise Find Your Focus and Forge Your Career Path with Confidence!</h1>
+              <h2>Rise above the noise, embrace your focus, and confidently forge a career path that reflects your true potential!</h2>
+              <h3><big>Every challenge in your career is a stepping stone to greatness,
+                an opportunity to grow, learn, and become stronger.</big></h3>
+              <button>Explore</button>
+            </div>
+          </div>
+          <div class="image-banner4">
+            <img src="../IMAGES/career5.png" alt="Slide 4">
+            <div class="banner-text4">
+              <h1>Inspire, Aspire, Achieve The Future is Yours</h1>
+              <h2>Let your inspiration guide you, your aspirations drive you, and your achievements define the bright future that's waiting for you!</h2>
+              <button>Explore</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    <!--  </div>
+    <button class="prev-button"><</button>
+    <button class="next-button">></button>
+    </div> -->
+    
 
     <main>
         <section class="hero">
@@ -733,8 +835,8 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Career Pathways is dedicated to helping students explore educational and career opportunities. Our goal is to guide you through your journey after school and beyond.</p>
+                <h3><a href="contact.html" style="text-decoration: none; color: inherit;">Contact Us</a></h3>
+                <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We’re here to help guide you through your educational and career journey. You can contact us via email, phone.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>

@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-function toggleContent(subject) {
+function toggleContent(job) {
             // Get the selected content div
-            var content = document.getElementById(subject);
+            var content = document.getElementById(job);
 
             // If the selected content is already visible, hide it and remove 'active' class
             if (content.style.display === 'block') {
@@ -66,7 +66,7 @@ function toggleContent(subject) {
                 event.target.classList.remove('active');
             } else {
                 // Otherwise, hide all contents first
-                var contents = document.getElementsByClassName('subject-content');
+                var contents = document.getElementsByClassName('job-content');
                 for (var i = 0; i < contents.length; i++) {
                     contents[i].style.display = 'none';
                 }
@@ -87,18 +87,3 @@ function toggleContent(subject) {
 
 
 
-
-
-
-//         // Function to handle click events and toggle active class
-// function toggleActive(event) {
-//     // Remove 'active' class from all h3 elements
-//     document.querySelectorAll('h3').forEach(el => el.classList.remove('active'));
-//     // Add 'active' class to the clicked h3 element
-//     event.target.classList.add('active');
-// }
-
-// // Attach event listeners to all h3 elements
-// document.querySelectorAll('h3').forEach(el => {
-//     el.addEventListener('click', toggleActive);
-// });

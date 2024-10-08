@@ -413,3 +413,233 @@ body {
     }
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* Desktops and Larger Screens (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .course {
+      width: calc(33.33% - 20px); /* Three courses per row on larger screens */
+  }
+
+  .hero h1 {
+      font-size: 2.5rem; /* Larger heading on big screens */
+  }
+
+  .hero p {
+      font-size: 1.2rem;
+  }
+
+  .footer-section {
+      margin-bottom: 15px; /* Adjust spacing in footer */
+  }
+}
+
+/* Small Laptops and Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .course {
+      width: calc(50% - 20px); /* Two courses per row */
+  }
+
+  .navbar {
+      padding: 10px 20px; /* Reduced padding on smaller screens */
+  }
+
+  .nav-links a {
+      font-size: 16px; /* Slightly smaller nav text */
+  }
+
+  .footer-section {
+      flex: 1 1 45%; /* Adjust the width of footer sections */
+  }
+}
+
+/* Medium Tablets and Landscape Phones (max-width: 900px) */
+@media (max-width: 900px) {
+  .course {
+      width: 100%; /* Full width courses on medium tablets */
+  }
+
+  .hero h1 {
+      font-size: 2.2rem;
+  }
+
+  .hero p {
+      font-size: 1.1rem;
+  }
+
+  .footer-section h3 {
+      font-size: 1.1rem; /* Adjust footer heading size */
+  }
+
+  .footer-section ul li {
+      margin-bottom: 8px;
+  }
+
+  .search-bar {
+      width: 80%; /* Expand the search bar */
+  }
+}
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Ensure full-width layout for courses */
+  .course {
+      width: 100%; /* Full width for courses */
+      margin-bottom: 20px;
+      padding: 15px;
+      box-sizing: border-box; /* Include padding and borders in width calculation */
+  }
+
+  /* Navbar adjustments for smaller screens */
+  .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 15px;
+  }
+
+  .nav-links {
+      display: none; /* Hide the links by default on mobile */
+      flex-direction: column;
+      width: 100%; /* Full-width for nav items */
+      text-align: left; /* Align text to the left */
+  }
+
+  .nav-links.active {
+      display: flex; /* Show nav links when active */
+  }
+
+  .nav-links li {
+      margin-bottom: 10px; /* Space between nav links */
+  }
+
+  .nav-links a {
+      font-size: 16px; /* Increase readability */
+      padding: 10px 0;
+      display: block;
+  }
+
+  .search-container {
+      width: 100%;
+      margin-top: 10px; /* Space out the search bar */
+  }
+
+  /* Hero Section Adjustments */
+  .hero {
+      padding: 20px;
+      text-align: center;
+  }
+
+  .hero h1 {
+      font-size: 2rem; /* Adjust hero title size */
+  }
+
+  .hero p {
+      font-size: 1rem; /* Adjust hero paragraph size */
+  }
+
+  /* Footer for mobile */
+  .footer-container {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .footer-section {
+      margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+      font-size: 1.1rem; /* Adjust footer heading size */
+  }
+
+  .footer-section ul {
+      padding-left: 0;
+  }
+
+  .footer-section ul li {
+      list-style: none;
+      margin-bottom: 10px;
+  }
+
+  .footer-bottom {
+      font-size: 0.9rem;
+  }
+  
+  /* Modal adjustments for better readability */
+  .modal-content {
+      padding: 15px;
+      width: 90%; /* Make modal content take most of the screen width */
+      max-width: 400px;
+  }
+
+  /* Buttons */
+  .toggle-btn,
+  .close-btn {
+      width: 100%; /* Full width for buttons */
+      padding: 12px;
+      font-size: 1rem; /* Larger font for buttons */
+      margin-bottom: 10px;
+      box-sizing: border-box;
+  }
+
+  /* Search bar adjustments */
+  .search-bar {
+      width: 80%; /* Adjust width for mobile */
+      padding: 10px;
+      font-size: 1rem;
+  }
+
+  .search-btn {
+      width: 20%;
+      padding: 10px;
+      font-size: 1rem;
+  }
+}
+
+/* Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Adjust hero for small mobile screens */
+  .hero h1 {
+      font-size: 1.6rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+
+  /* Smaller footer text */
+  .footer-section h3 {
+      font-size: 1rem;
+  }
+
+  .footer-section p,
+  .footer-section ul li {
+      font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+      font-size: 0.75rem;
+  }
+}

@@ -19,3 +19,11 @@ function toggleFAQ(faqElement) {
         faqElement.classList.add("faq-active");
     }
 }
+
+
+
+
+
+
+
+

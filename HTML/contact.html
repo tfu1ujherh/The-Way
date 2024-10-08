@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../CSS/contact.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="way.html">Home</a></li>
+
+              
+                <!-- Courses Dropdown -->
+                <li class="dropdown">
+                    <a href="courses.html">Courses & Careers</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="courses.html">Courses</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
+                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
+                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="careers.html">Careers</a></li>
+                        
+                        <!-- Government Jobs Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a href="govtjobs.html">Government Jobs</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="#">Government Jobs after 10th</a></li>
+                                <li><a href="#">Government Jobs after 12th</a></li>
+                                <li><a href="#">Government Jobs after Diploma</a></li>
+
+                                <li><a href="#">Government Jobs after Graduation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Road Maps Dropdown -->
+                <li class="dropdown">
+                    <a href="roadmap.html">Road Maps</a>
+                    <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
+                            <!-- Role Based Roadmaps Dropdown -->
+                            <li class="dropdown-submenu">
+                                <a href="#">Role Based Roadmaps</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="#">Frontend</a></li>
+                                    <li><a href="#">Backend</a></li>
+                                    <li><a href="#">Full Stack</a></li>
+                                    <li><a href="#">Devops</a></li>
+                                </ul>
+                            </li>
+                            <!-- Skill Based Roadmaps Dropdown -->
+                            <li class="dropdown-submenu">
+                                <a href="#">Skill Based Roadmaps</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="#">Data Structures</a></li>
+                                    <li><a href="#">Java</a></li>
+                                    <li><a href="#">Python</a></li>
+                                    <li><a href="#">React</a></li>
+                                    <li><a href="#">Git and GitHub</a></li>
+                                    <li><a href="#">Spring Boot</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </li>
+
+                <!-- Interview Questions Dropdown -->
+                <li class="dropdown">
+                    <a href="interview.html">Interview Questions</a>
+                    <ul class="dropdown-menu">
+                        <!-- Technical Jobs Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a href="#">Technical</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="#">Web Development </a></li>
+                                <li><a href="#">Data Science </a></li>
+                                <li><a href="#">DevOps</a></li>
+                                <li><a href="#">Cybersecurity</a></li>
+                                <li><a href="#">Data Structures</a></li>
+                                <li><a href="#">Machine Learning</a></li>
+                                <li><a href="#">Cybersecurity</a></li>
+                                <li><a href="#">Software Developer</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- Non Technical Jobs Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a href="#">Non-Technical</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="#">Marketing Manager</a></li>
+                                <li><a href="#">Sales Manager</a></li>
+                                <li><a href="#">Project Manager</a></li>
+                                <li><a href="#">Healthcare Administrator</a></li>
+                                <li><a href="#">Civil Project Manager</a></li>
+                                <li><a href="#">Construction Manager</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="faq.html">Q&A</a></li> 
+                    </ul>
+                </li>
+
+                <li><a href="query.html">Queries</a></li>
+
+                <li><a href="login.html">Login & SignUp</a></li>
+
+            </ul>
+        </nav>
+        <div class="search-container">
+        </div>
+    </header>
+    <div class="backimg">
+        <img src="../IMAGES/img1.jpeg" alt="Background Image">
+        <!-- Big Heading for Contact Us -->
+        <div class="big-heading">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="content-container">
+            <!-- Left side: Contact Info -->
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <h3>Location</h3>
+                <p>Vadodara , Parul university <br> CV Raman Building <br>Gujarat - 391760</p>
+                
+                <h3>Contact Us</h3>
+                <p>Email id: support@theway.com<br>Phone: +91 9768532980</p>
+            </div>
+
+            <!-- Right side: Form -->
+            <div class="contact-form">
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/contact.js"></script>
+</body>
+</html>
+
+
