@@ -72,7 +72,7 @@ function toggleContent(subject) {
                 }
 
                 // Remove 'active' class from all list items
-                var listItems = document.querySelectorAll('li');
+                var listItems = document.querySelectorAll('a');
                 listItems.forEach(function(item) {
                     item.classList.remove('active');
                 });
@@ -90,15 +90,17 @@ function toggleContent(subject) {
 
 
 
-//         // Function to handle click events and toggle active class
-// function toggleActive(event) {
-//     // Remove 'active' class from all h3 elements
-//     document.querySelectorAll('h3').forEach(el => el.classList.remove('active'));
-//     // Add 'active' class to the clicked h3 element
-//     event.target.classList.add('active');
-// }
-
-// // Attach event listeners to all h3 elements
-// document.querySelectorAll('h3').forEach(el => {
-//     el.addEventListener('click', toggleActive);
-// });
+        document.getElementById('user-icon').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent click event from bubbling up
+            var dropMenu = document.getElementById('drop-menu');
+            // Toggle display of dropdown
+            dropMenu.style.display = dropMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Hide dropdown if clicking outside
+        document.addEventListener('click', function(event) {
+            var dropMenu = document.getElementById('drop-menu');
+            if (!dropMenu.contains(event.target) && !document.getElementById('user-icon').contains(event.target)) {
+                dropMenu.style.display = 'none';
+            }
+        });

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Comment Section</title>
+        <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
+
+		<link
+			rel="stylesheet"
+			href="../CSS/query.css" />
+	</head>
+	<body>
+        <header class="navbar">
+            <div class="logo">
+                <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="way.html">Home</a></li>
+    
+                  
+                    <!-- Courses Dropdown -->
+                    <li class="dropdown">
+                        <a href="courses.html">Courses & Careers</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="courses.html">Courses</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
+                                    <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
+                                    <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="careers.html">Careers</a></li>
+    
+                            
+                            <li><a href="govtjobs.html">Government Jobs</a></li>
+    
+                        </ul>
+                    </li>
+    
+    
+    
+                    <li><a href="roadmap.html">Road Maps</a></li>
+    
+    
+                    
+    
+                    <!-- Interview Questions Dropdown -->
+                    <li class="dropdown">
+                        <a href="interview.html">Interview Questions</a>
+                        <ul class="dropdown-menu">
+                            <!-- Technical Jobs Dropdown -->
+                            <li> <a href="interview.html#technical">Technical</a></li>
+                            <!--  Government Jobs Dropdown -->
+                            <li> <a href="interview.html#governmnet">Government</a></li>
+                               
+                            <li><a href="faq.html">Q&A</a></li> 
+                        </ul>
+                    </li>
+    
+                    <li><a href="query.html">Queries</a></li>
+    
+    
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <img src="../IMAGES/userlogo.jpg" alt="User Logo" class="user-logo" id="user-icon">
+                <span class="user-name">Ariga Shankar</span>
+                <div class="drop-menu" id="drop-menu">
+                    <a href="login.html" class="drop-item">Logout</a>
+                    <a href="#" class="drop-item">Delete Account</a>
+                </div>
+            </div>
+           
+            
+            
+        </header>
+
+		 <div class="comment-section">
+			<h1>Query Section</h1>
+			<form id="comment-form">
+				<textarea
+					id="comment-input"
+					placeholder="Enter your comment here..."
+					required></textarea>
+				<button type="submit">Submit</button>
+			</form>
+
+			<div id="comments-container">
+				<h2>All Quiries:</h2>
+				<ul id="comments-list"></ul>
+			</div>
+		</div> 
+
+		<script src="../JS/query.js"></script>
+	</body>
+</html>

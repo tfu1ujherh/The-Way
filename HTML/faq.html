@@ -17,100 +17,65 @@
             <ul class="nav-links">
                 <li><a href="way.html">Home</a></li>
 
+              
                 <!-- Courses Dropdown -->
                 <li class="dropdown">
                     <a href="courses.html">Courses & Careers</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
-                        <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
-                        <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
-                        <!-- Government Jobs Dropdown -->
                         <li class="dropdown-submenu">
-                            <a href="govtjobs.html">Government Jobs</a>
+                            <a href="courses.html">Courses</a>
                             <ul class="dropdown-submenu-menu">
-                                <li><a href="#">Government Jobs after 10th</a></li>
-                                <li><a href="#">Government Jobs after 12th</a></li>
-                                <li><a href="#">Government Jobs after Graduation</a></li>
+                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
+                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
+                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
                             </ul>
                         </li>
+                        <li><a href="careers.html">Careers</a></li>
+
+                        
+                        <li><a href="govtjobs.html">Government Jobs</a></li>
+
                     </ul>
                 </li>
 
-                <!-- Road Maps Dropdown -->
-                <li class="dropdown">
-                    <a href="roadmap.html">Road Maps</a>
-                    <ul class="dropdown-menu">
-                        <ul class="dropdown-menu">
-                            <!-- Role Based Roadmaps Dropdown -->
-                            <li class="dropdown-submenu">
-                                <a href="#">Role Based Roadmaps</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="#">Frontend</a></li>
-                                    <li><a href="#">Backend</a></li>
-                                    <li><a href="#">Full Stack</a></li>
-                                    <li><a href="#">Devops</a></li>
-                                </ul>
-                            </li>
-                            <!-- Skill Based Roadmaps Dropdown -->
-                            <li class="dropdown-submenu">
-                                <a href="#">Skill Based Roadmaps</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="#">Data Structures</a></li>
-                                    <li><a href="#">Java</a></li>
-                                    <li><a href="#">Python</a></li>
-                                    <li><a href="#">React</a></li>
-                                    <li><a href="#">Git and GitHub</a></li>
-                                    <li><a href="#">Spring Boot</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </ul>
-                </li>
+
+
+                <li><a href="roadmap.html">Road Maps</a></li>
+
+
+                
 
                 <!-- Interview Questions Dropdown -->
                 <li class="dropdown">
                     <a href="interview.html">Interview Questions</a>
                     <ul class="dropdown-menu">
                         <!-- Technical Jobs Dropdown -->
-                        <li class="dropdown-submenu">
-                            <a href="#">Technical</a>
-                            <ul class="dropdown-submenu-menu">
-                                <li><a href="#">Web Development </a></li>
-                                <li><a href="#">Data Science </a></li>
-                                <li><a href="#">DevOps</a></li>
-                                <li><a href="#">Cybersecurity</a></li>
-                                <li><a href="#">Data Structures</a></li>
-                                <li><a href="#">Machine Learning</a></li>
-                                <li><a href="#">Cybersecurity</a></li>
-                                <li><a href="#">Software Developer</a></li>
-
-                            </ul>
-                        </li>
-                        <!-- Non Technical Jobs Dropdown -->
-                        <li class="dropdown-submenu">
-                            <a href="#">Non-Technical</a>
-                            <ul class="dropdown-submenu-menu">
-                                <li><a href="#">Marketing Manager</a></li>
-                                <li><a href="#">Sales Manager</a></li>
-                                <li><a href="#">Project Manager</a></li>
-                                <li><a href="#">Healthcare Administrator</a></li>
-                                <li><a href="#">Civil Project Manager</a></li>
-                                <li><a href="#">Construction Manager</a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="">Q&A</a></li> <!-- Update with actual path -->
+                        <li> <a href="interview.html#technical">Technical</a></li>
+                        <!--  Government Jobs Dropdown -->
+                        <li> <a href="interview.html#governmnet">Government</a></li>
+                           
+                        <li><a href="faq.html">Q&A</a></li> 
                     </ul>
                 </li>
 
-                <li><a href="login.html">Login & SignUp</a></li>
+                <li><a href="query.html">Queries</a></li>
+
+
             </ul>
         </nav>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search...">
-            <button class="search-btn">Go</button>
+        <div class="user-profile">
+            <img src="../IMAGES/userlogo.jpg" alt="User Logo" class="user-logo" id="user-icon">
+            <span class="user-name">Ariga Shankar</span>
+            <div class="drop-menu" id="drop-menu">
+                <a href="login.html" class="drop-item">Logout</a>
+                <a href="#" class="drop-item">Delete Account</a>
+            </div>
         </div>
+        
+        
+        
     </header>
+
 
     <section class="image-banner">
         <img src="../IMAGES/careerhways.png" alt="Banner Image">
@@ -418,417 +383,8 @@
             </div>
         </div>
         
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What kind of resources does "The Way" provide for interview preparation?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It offers a wide range of interview questions, preparation strategies, and mock interview materials for different fields.</p>
-            </div>
-        </div>
         
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" help students with competitive exam preparation?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform provides study materials, mock tests, and YouTube channel recommendations for competitive exams like SSC and UPSC.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What role does family expectations play in career choices?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Family expectations can push students toward conventional career paths, but "The Way" helps them make decisions based on personal interests and strengths.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What YouTube channels are recommended for government job preparation?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform offers specific YouTube channel recommendations for various government job exams like SSC, UPSC, and State Service exams.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" help with preparation for the GATE exam?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It offers study materials, recommended books, and preparation strategies specifically for the GATE exam.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" offer guidance for civil service exams?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform offers extensive materials for civil service exams like UPSC and State Public Service exams.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does the platform help students transition from education to employment?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It provides career roadmaps, interview preparation, and insights into job roles that align with their educational background.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What emerging fields can I explore on "The Way"?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Students can explore fields like Artificial Intelligence, Data Science, Environmental Science, and more.</p>
-            </div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" provide information on non-conventional careers?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, "The Way" helps students explore non-conventional careers such as graphic design, film-making, and social media management, in addition to traditional career paths.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" assist with career development for students in the Humanities?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It provides detailed insights and roadmaps for fields like psychology, sociology, political science, and more, helping Humanities students explore various career options.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Can students get guidance on higher education abroad through "The Way"?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform offers guidance on international education opportunities, including courses, exams (like GRE, TOEFL), and university selection processes.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What kind of financial aid information does "The Way" provide?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform helps students explore scholarships, grants, and financial aid options for pursuing higher education.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does the platform include information on internships and work experience?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, it emphasizes the importance of internships, providing resources on how to find relevant internships that align with students' career aspirations.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" help students understand industry demands?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It provides information on current industry trends and emerging skill requirements to help students stay competitive in the job market.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What types of competitive exams does "The Way" cover?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It covers a variety of exams like SSC, UPSC, GATE, GRE, TOEFL, and more, offering preparation strategies and resources for each.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" offer guidance for vocational courses?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It provides information about vocational courses like web development, digital marketing, and other skill-based training programs, helping students choose the right career path.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" offer preparation tips for students pursuing Medicine?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform offers study materials, entrance exam preparation (like NEET), and guidance on choosing specializations in the medical field.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What resources are provided for students interested in the IT field?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>"The Way" offers guidance on coding languages, certifications, and software development tools, along with career roadmaps for fields like software engineering and data science.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Can students get help with career transitions on "The Way"?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, professionals or students considering a career change can access resources on transitioning into new fields, with roadmaps and certification information.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What kind of exam resources does the platform offer for government jobs?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It includes mock tests, previous years' papers, and preparation strategies for various government exams like SSC, UPSC, and State Public Service exams.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" provide career guidance after completing a B.Tech degree?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, it offers detailed career roadmaps for B.Tech graduates, covering fields like software engineering, civil engineering, and other relevant sectors.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How can I prepare for the SSC exams using "The Way"?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform provides SSC exam materials, including study tips, recommended books, mock tests, and YouTube channel recommendations.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" offer industry insights for engineering fields?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform provides industry-specific career insights for engineering students, helping them understand key technologies and emerging trends.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Can "The Way" help with MBA preparation?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, it provides resources for MBA preparation, including information on entrance exams like CAT, MAT, and tips on acing interviews and group discussions.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What preparation strategies does "The Way" offer for banking exams?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It offers preparation tips, study materials, and mock tests for banking exams like IBPS and SBI PO.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" help students find job placements?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform helps students explore job opportunities by connecting them with industry trends, job portals, and recommended internships to gain experience.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Can the platform guide me on freelancing careers?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, "The Way" offers insights into freelancing careers, covering areas like digital marketing, content writing, and web development.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What kind of career guidance is available for Commerce students?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It offers insights into careers like accounting, finance, and management, with detailed information about degrees, certifications, and job opportunities.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" provide guidance for government job preparation after graduation?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform provides resources and strategies for preparing for government jobs after graduation, including relevant exams and selection processes.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How can "The Way" help with choosing the right undergraduate course?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform provides detailed information on various undergraduate courses, including career prospects, syllabi, and preparation tips to help students make informed decisions.</p>
-            </div>
-        </div>
-
-
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" provide support for students interested in Civil Services?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It provides resources for students preparing for civil services exams like UPSC, with recommended reading lists, syllabus breakdowns, and mock tests.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Can "The Way" help with selecting specialization courses?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform offers personalized guidance to help students choose the right specialization based on their skills and career goals.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What does "The Way" offer in terms of higher education preparation?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform provides resources for higher education preparation, including entrance exam tips, university selection guides, and information on required qualifications.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" support students from rural areas?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It offers accessible career guidance resources, helping students from rural areas explore education and job opportunities beyond their local communities.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>What YouTube channels are recommended for civil services exam preparation?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform provides curated lists of the best YouTube channels for SSC, UPSC, and other civil services exam preparation.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" offer tips for balancing studies with extracurricular activities?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform provides strategies to help students balance academic commitments with extracurriculars for holistic development.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" address the problem of career mismatches?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>By offering personalized recommendations and career roadmaps, the platform helps students avoid career mismatches based on their true interests.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does the platform provide language-specific career advice?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, "The Way" offers career guidance for language-based professions such as translation, teaching, and content creation.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Can students access mental health resources through "The Way"?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>The platform provides links to mental health resources, helping students cope with stress and anxiety related to career and academic choices.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>How does "The Way" help students choose between Science and Commerce streams?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>It offers comparative insights, detailing the pros and cons of each stream based on individual student preferences and career goals.</p>
-            </div>
-        </div>
-        
-        <div class="faq">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                <h3>Does "The Way" include soft skills training?</h3>
-                <i class="faq-icon">+</i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the platform offers resources to help students improve soft skills like communication, teamwork, and leadership, crucial for career success.</p>
-            </div>
-        </div>
-        
+       
         <div class="faq">
             <div class="faq-question" onclick="toggleFAQ(this)">
                 <h3>How can students get guidance on non-traditional careers like social media management?</h3>
@@ -882,8 +438,8 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Career Pathways is dedicated to helping students explore educational and career opportunities. Our goal is to guide you through your journey after school and beyond.</p>
+                <h3><a href="contact.html" style="text-decoration: none; color: inherit;">Contact Us</a></h3>
+                <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We’re here to help guide you through your educational and career journey. You can contact us via email, phone.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
