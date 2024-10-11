@@ -1,96 +1,172 @@
-/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body Style */
 body {
-    background: url('../IMAGES/img7.jpg') no-repeat center center fixed; /* Background image */
-    background-size: cover; /* Cover entire background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Container for the login form */
-.login-container {
-    background-color: rgb(44, 3, 3); /* Black background with transparency */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    max-width: 400px;
-    width: 100%;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Form Title */
-.login-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #fff;
+.login-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  text-align: center;
+  width: 350px;
 }
 
-/* Form Group */
-.form-group {
-    margin-bottom: 15px;
+.login-box h2 {
+  color: #fff;
+  margin-bottom: 30px;
 }
 
-/* Label Style */
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #ccc;
+.user-box {
+  position: relative;
 }
 
-/* Input Fields */
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+.user-box input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.form-group input::placeholder {
-    color: #aaa;
+.user-box input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-/* Button Style */
 .login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background: none;
+  z-index: 1;
 }
 
 .login-btn:hover {
-    background-color: #218838;
+  background: #03e9f4;
+  color: #fff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
 }
 
-/* Link Style */
-.login-form p {
-    text-align: center;
-    margin-top: 15px;
+.login-btn span {
+  position: absolute;
+  display: block;
 }
 
-.login-form p a {
-    color: #28a745;
-    text-decoration: none;
+.login-btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1.5s linear infinite;
 }
 
-.login-form p a:hover {
-    text-decoration: underline;
+.login-btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1.5s linear infinite;
+}
+
+.login-btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1.5s linear infinite;
+}
+
+.login-btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+.options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.options a {
+  color: #03e9f4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.options a:hover {
+  text-decoration: underline;
 }

@@ -3,145 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Government Jobs</title>
-    <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
-    <link rel="stylesheet" href="demo.css"> <!-- Link to the CSS file -->
+    <title>User Profile Dropdown</title>
+    <link rel="stylesheet" href="demo.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="demo.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="way.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="govtjobs.html">Government Jobs</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="roadmap.html">Road Maps</a></li>
-                <li><a href="interview.html">Interview Questions</a></li>
-                <li><a href="roap.html">Q&A</a></li>
-            </ul>
-        </nav>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search...">
-            <button class="search-btn">Go</button>
-        </div>
-    </header>
-
-    <div class="image-banner">
-        <img src="../IMAGES/img6.jpeg" alt="Banner Image" width="900px" height="300px">
-    </div>
-
-    <div class="hero">
-        <h1>Government Jobs</h1>
-        <p>Explore various government job opportunities available after completing your education.</p>
-    </div>
-
-    <section>
-        <div class="course" id="govt-jobs-10th">
-            <h2>Government Jobs After 10th Grade</h2>
-            <p>Discover a range of government job opportunities available for students who have completed their 10th grade.</p>
-            <button class="toggle-btn" data-target="govt-jobs-10th-modal">Read More</button>
-        </div>
-    
-        <div class="course" id="govt-jobs-12th">
-            <h2>Government Jobs After 12th Grade</h2>
-            <p>Learn about government job opportunities available for students who have completed their 12th grade in various fields.</p>
-            <button class="toggle-btn" data-target="govt-jobs-12th-modal">Read More</button>
-        </div>
-    
-        <div class="course" id="govt-jobs-graduation">
-            <h2>Government Jobs After Graduation</h2>
-            <p>Explore various government job opportunities for individuals who have completed their graduation in different fields.</p>
-            <button class="toggle-btn" data-target="govt-jobs-graduation-modal">Read More</button>
-        </div>
-        <div class="course" id="govt-jobs-diploma">
-                <h2>Government Jobs After Diploma</h2>
-                <p>Explore various government job opportunities for individuals who have completed their diploma in different fields.</p>
-                <button class="toggle-btn" data-target="govt-jobs-diploma-modal">Read More</button>
-            </div>
-    </section>
-
-    <div class="modal" id="govt-jobs-10th-modal">
-        <div class="modal-content">
-            <h2>Government Jobs After 10th Grade</h2>
-            <ul class="job-list">
-                <div class="job-row">
-                    <li onclick="toggleContent('railways')">Indian Railways (RRB) - Group D</li>
-                    <li onclick="toggleContent('ssc-mts')">Staff Selection Commission (SSC) - Multi-Tasking Staff (MTS)</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('indian-army')">Indian Army - Soldier (General Duty)</li>
-                    <li onclick="toggleContent('indian-navy')">Indian Navy - Sailor (MR)</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('indian-airforce')">Indian Air Force - Group ‘C’ Civilian</li>
-                    <li onclick="toggleContent('police')">Police Department - Constable/Home Guard</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('postal')">Postal Department - Gramin Dak Sevak (GDS)</li>
-                    <li onclick="toggleContent('psus')">Public Sector Units (PSUs) - Helper/Technician</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('drdo')">Defense Research & Development Organization (DRDO) - Technician</li>
-                    <li onclick="toggleContent('state-gov')">State Government Jobs - Peon/Ward Boy</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('bsf')">Border Security Force (BSF) - Constable/Tradesman</li>
-                    <li onclick="toggleContent('cisf')">Central Industrial Security Force (CISF) - Constable</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('forest')">Forest Department - Forest Guard/Watchman</li>
-                    <li onclick="toggleContent('fci')">Food Corporation of India (FCI) - Watchman</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('coast-guard')">Indian Coast Guard - Navik (Domestic Branch)</li>
-                    <li onclick="toggleContent('transport')">State Transport Department - Driver/Conductor</li>
-                </div>
-                <div class="job-row">
-                    <li onclick="toggleContent('anganwadi')">Anganwadi Jobs - Worker/Helper</li>
-                </div>
-            </ul>
-            <button class="close-btn">Close</button>
+    <div class="user-profile">
+        <img src="user-logo.png" alt="User Logo" class="user-logo" id="user-icon">
+        <span class="user-name">John Doe</span>
+        <div class="drop-menu" id="drop-menu">
+            <a href="#" class="drop-item">Logout</a>
+            <a href="#" class="drop-item">Delete Account</a>
         </div>
     </div>
 
-
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Career Pathways is dedicated to helping students explore educational and career opportunities. Our goal is to guide you through your journey after school and beyond.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="way.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="govtjobs.html">Government Jobs</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="roadmap.html">Road Maps</a></li>
-                    <li><a href="interview.html">Interview Questions</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/"><img src="../IMAGES/face.png" alt="Facebook Logo"></a>
-                    <a href="https://x.com/"><img src="../IMAGES/twi.png" alt="Twitter Logo"></a>
-                    <a href="https://www.instagram.com/"><img src="../IMAGES/insta.png" alt="Instagram Logo"></a>
-                    <a href="https://www.linkedin.com/"><img src="../IMAGES/link.png" alt="LinkedIn Logo"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="demo.js"></script> <!-- Link to the JavaScript file -->
-
+    <script src="demo.js"></script> <!-- Link to your JS file -->
 </body>
 </html>

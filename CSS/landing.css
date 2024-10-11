@@ -1,0 +1,628 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #e6f7ff;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color:#e6f7ff; /* Light blue background */
+}
+
+/* Logo styling */
+.logo img {
+    width: 60px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 60px;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links li {
+    font-size: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0073e6; /* Blue color for links */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #005bb5; /* Darker blue on hover */
+}
+
+/* Authentication buttons */
+.auth-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.create-account-btn, .sign-in-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-right: 50px;
+}
+
+.create-account-btn {
+    background-color: #cce7ff; /* Light blue for Create Account */
+    color: #0073e6; /* Blue text */
+}
+
+.create-account-btn:hover {
+    background-color: #b3d9ff; /* Darker on hover */
+}
+
+.sign-in-btn {
+    background-color: #0073e6; /* Blue for Sign In */
+    color: white;
+}
+
+.sign-in-btn:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/*//////////////////11111111111111///////////*/
+
+.carousel-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+    background-color: #e6f7ff;
+    margin-top: 30px;
+    height: 70vh;
+}
+
+.carousel {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    gap: 50px; /* 200px gap between content and images */
+}
+
+
+.carousel-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-content .content-item {
+    display: none;
+}
+
+.carousel-content .content-item.active {
+    display: block;
+}
+
+.carousel-content h1 {
+    font-size:70px;
+    margin-bottom: 30px; /* Small gap between heading and paragraph */
+}
+
+.carousel-content p {
+    margin-bottom: 100px; /* 100px gap between content and explore button */
+}
+
+.carousel-images {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-images img {
+    width: 400px;
+    height: auto;
+    display: none;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.box {
+    margin-top: 50px;
+    display: flex; 
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: #94c7fa; 
+    width: 100%; /* Full width */
+    height: 80px; /* Fixed height */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for shadow and background color */
+}
+
+.box h3{
+        background-color: transparent; /* Remove background color */
+        padding: 5px 10px; /* Optional: Padding can be removed if not needed */
+        border-radius: 5px; /* Optional: Remove if you don't want rounded corners */
+        color: #000; /* Text color */
+}
+
+.box:hover {
+    background-color: #84b0e1; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+.imgcon{
+    display: flex;
+    padding: 0;
+    margin-right: 0;
+    margin-top: 70px;
+    width: 90%;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow:rgba(0, 0, 0, 0.6);
+    margin-left: 50px;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgcon img{
+    width: 400px;
+    height: 300px;
+}
+
+.imgcon #content {
+    margin-top: 10px;
+    z-index: 1;
+}
+
+#content h1{
+    z-index: 1;
+    text-align: center;
+    margin-left: -180px;
+}
+
+#content p{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: -97px;
+}
+
+/* ////////////////////////////////////////////  */
+
+
+.features {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #bee8fd; /* Changed background */
+    margin-top: 100px;         /* Added margin-top */
+    width: 90%;                /* Adjusted width */
+    margin-left: 70px;         /* Adjusted left margin */
+    border-radius: 6px;        /* Adjusted border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    height: 500px;             /* Set height */
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    background-color: #bee8fd;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    background-color: #bee8fd;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    /* Removed background color for the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    height: 310px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon img {
+    /* Increased icon size to match your request */
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.feature-card a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.feature-card a:hover {
+    text-decoration: underline;
+}
+
+.icon img{
+    width: 35px;
+    height: 35px;
+}
+
+.icon1{
+    margin-bottom: 5px;
+}
+
+.icon2{
+    margin-bottom: 20px;
+}
+
+.icon3{
+    margin-bottom: 20px;
+}
+
+/* ///////////////////////////////////////////// */
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: #E6F7ff; /* Matches the background in your image */
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    margin-bottom: 80px;
+}
+
+.cta-btn {
+    padding: 12px 24px; /* Padding for the button */
+    background-color: #0073e6; /* Button background color */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.box3{
+    margin-top: 500px;
+    background-color: black;
+    height: 400px;
+    width: 34px;
+}
+
+/*/////////////4444//////////////*/ 
+
+.fourthbox {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #E0F7FA; /* Changed background */
+    margin-top: 5px;         /* Added margin-top */
+    width: 90%;                /* Adjusted width */
+    margin-left: 70px;         /* Adjusted left margin */
+    border-radius: 6px;        /* Adjusted border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    height: 500px;
+  }
+
+.fourthbox  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    background-color: #E0F7FA;
+  }
+  
+.fourthbox  p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    background-color: #E0F7FA;
+  }
+  
+  .metrics {
+    display: flex;
+    margin-top: 50px;
+    border-radius: 4px;
+    margin-left: 180px;
+    background-color: #E0F7FA;
+    gap: 60px;
+  }
+
+.metric:hover {
+    transform: translateY(-30px);
+    transition: transform 0.3s ease;
+}
+
+  
+  .metric {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+  }
+
+
+  .metric h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    justify-content: center;
+  }
+  
+  .metric p {
+    font-size: 14px;
+    background-color: #fff;
+  }
+
+/*//////////555/////////////////*/
+
+  .testimonials {
+    display: flex;
+    margin-top: 80px;
+    gap: 90px;
+    margin-left: 180px;
+    padding: 50px;
+  }
+  
+  .testimonial {
+    background-color: #72c8ed;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  .testimonial:hover{
+    transform: translateY(-50px);
+    transition: transform 0.2s ease;
+  }
+  
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    background-color: #72c8ed;
+  }
+  
+  .testimonial p {
+    font-size: 16px;
+    background-color: #72c8ed;
+    margin-bottom: 15px;
+  }
+  
+  .stars {
+    display: flex;
+    background-color: #72c8ed;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .stars img {
+    width: 20px;
+    height: 20px;
+  }
+
+/*////////////////6666////////////*/
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    margin-top: 70px;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2c3e50;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+    background-color: #2c3e50;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    background-color: #2c3e50;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #2c3e50;
+    line-height: 1.8;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    background-color: #2c3e50;
+}
+
+.footer-section{
+    background-color: #2c3e50;
+}
+
+.footer-section ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+    background-color: #2c3e50;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+    background-color: #2c3e50;
+}
+
+.social-icons{
+    background-color:#2c3e50 ;
+    
+}
+
+.social-icons a{
+    background-color: transparent;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.social-icons a img:hover {
+    background-color: #2c3e50;
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    margin: 0;
+    background-color: #2c3e50;
+    color: #95a5a6;
+}
+
+.footer .footer-container, .footer .footer-bottom {
+    animation: fadeInUp 0.8s ease-in-out;
+    background-color: #2c3e50;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+.name-container {
+    display: flex;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+    gap: 15px;
+}
+
+#nameDisplay {
+    font-size: 16px;
+    background-color: #2c3e50;
+    color: #007BFF;
+    opacity: 1;
+}
+
+.name-container h4{
+    background-color: #2c3e50;
+    margin-left: 30px;
+}
+
