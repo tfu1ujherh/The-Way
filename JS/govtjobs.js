@@ -51,54 +51,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+function toggleContent(job) {
+    // Get the selected content div
+    var content = document.getElementById(job);
 
-
-
-
-
-function toggleContent(subject) {
-            // Get the selected content div
-            var content = document.getElementById(subject);
-
-            // If the selected content is already visible, hide it and remove 'active' class
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                event.target.classList.remove('active');
-            } else {
-                // Otherwise, hide all contents first
-                var contents = document.getElementsByClassName('subject-content');
-                for (var i = 0; i < contents.length; i++) {
-                    contents[i].style.display = 'none';
-                }
-
-                // Remove 'active' class from all list items
-                var listItems = document.querySelectorAll('li');
-                listItems.forEach(function(item) {
-                    item.classList.remove('active');
-                });
-
-                // Show the selected content and add 'active' class to the clicked item
-                content.style.display = 'block';
-                event.target.classList.add('active');
-            }
+    // If the selected content is already visible, hide it and remove 'active' class
+    if (content.style.display === 'block') {
+        content.style.display = 'none';
+        event.target.classList.remove('active');
+    } else {
+        // Otherwise, hide all contents first
+        var contents = document.getElementsByClassName('job-content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
         }
-        
+
+        // Remove 'active' class from all list items
+        var listItems = document.querySelectorAll('li');
+        listItems.forEach(function(item) {
+            item.classList.remove('active');
+        });
+
+        // Show the selected content and add 'active' class to the clicked item
+        content.style.display = 'block';
+        event.target.classList.add('active');
+    }
+}
 
 
 
 
 
+document.getElementById('user-icon').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent click event from bubbling up
+    var dropMenu = document.getElementById('drop-menu');
+    // Toggle display of dropdown
+    dropMenu.style.display = dropMenu.style.display === 'block' ? 'none' : 'block';
+});
 
-
-//         // Function to handle click events and toggle active class
-// function toggleActive(event) {
-//     // Remove 'active' class from all h3 elements
-//     document.querySelectorAll('h3').forEach(el => el.classList.remove('active'));
-//     // Add 'active' class to the clicked h3 element
-//     event.target.classList.add('active');
-// }
-
-// // Attach event listeners to all h3 elements
-// document.querySelectorAll('h3').forEach(el => {
-//     el.addEventListener('click', toggleActive);
-// });
+// Hide dropdown if clicking outside
+document.addEventListener('click', function(event) {
+    var dropMenu = document.getElementById('drop-menu');
+    if (!dropMenu.contains(event.target) && !document.getElementById('user-icon').contains(event.target)) {
+        dropMenu.style.display = 'none';
+    }
+});

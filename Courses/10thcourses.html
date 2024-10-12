@@ -9,34 +9,77 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo" > <a href="way.html"><img src="../IMAGES/white.png" alt="" height="60px",width="60px" ></a> </div>
+        <div class="logo">
+            <a href="../HTML/way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="../HTML/way.html">Home</a></li>
-                <li><a href="../HTML/courses.html">Courses</a></li>
-                <li><a href="../HTML/govtjobs.html">Government Jobs</a></li>
-                <li><a href="../HTML/careers.html">Careers</a></li>
-                <li><a href="../HTML/roadmaps.html">Road Maps</a></li>
-                <li><a href="../HTML/interview.html">Interview Questions</a></li>
-                <li><a href="../HTML/roahtml">Q&A </a></li>
+
+              
+                <!-- Courses Dropdown -->
+                <li class="dropdown">
+                    <a href="../HTML/courses.html">Courses & Careers</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="../HTML/courses.html">Courses</a>
+                            <ul class="dropdown-submenu-menu">
+                                <li><a href="10thcourses.html">Courses after 10th</a></li>
+                                <li><a href="12thcourses.html">Courses after 12th</a></li>
+                                <li><a href="graduation.html">Courses after Graduation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../HTML/careers.html">Careers</a></li>
+                        
+                        <li><a href="../HTML/govtjobs.html">Government Jobs</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li><a href="../HTML/roadmap.html">Road Maps</a></li>
+
+
+                <!-- Interview Questions Dropdown -->
+                <li class="dropdown">
+                    <a href="../HTML/interview.html">Interview Questions</a>
+                    <ul class="dropdown-menu">
+                        <!-- Technical Jobs Dropdown -->
+                        <li> <a href="../HTML/interview.html#technical">Technical</a></li>
+                        <!--  Government Jobs Dropdown -->
+                        <li> <a href="../HTML/interview.html#governmnet">Government</a></li>
+                           
+                        <li><a href="../HTML/faq.html">Q&A</a></li> 
+                    </ul>
+                </li>
+
+                <li><a href="../HTML/query.html">Queries</a></li>
 
 
             </ul>
         </nav>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search...">
-            <button class="search-btn">Go</button>
+        <div class="user-profile">
+            <img src="../IMAGES/userlogo.jpg" alt="User Logo" class="user-logo" id="user-icon">
+            <span class="user-name">Ariga Shankar</span>
+            <div class="drop-menu" id="drop-menu">
+                <a href="login.html" class="drop-item">Logout</a>
+                <a href="#" class="drop-item">Delete Account</a>
+            </div>
         </div>
     </header>
 
-
     <div class="image-banner">
-        <img src="../IMAGES/logo10th.jpg" alt="Banner Image" >
+        <img src="../IMAGES/10thmain.jpeg" alt="Banner Image">
+        <div class="banner-text">
+            <h1>Navigate Your Future Choose the Right Course After 10th</h1>
+            <h2>Explore different streams, vocational courses, and integrated programs available after 10th grade.</h2>
+            <a href="#hero"><button>Explore now</button></a>
+        </div>
     </div>
+    
 
 
-
-        <div class="hero">
+        <div class="hero" id="hero">
             <h1>Courses After 10th</h1>
             <p>Explore different streams, vocational courses, and integrated programs available after 10th grade.</p>
         </div>
@@ -1821,8 +1864,8 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Career Pathways is dedicated to helping students explore educational and career opportunities. Our goal is to guide you through your journey after school and beyond.</p>
+                <h3><a href="../HTML/contact.html" style="text-decoration: none; color: inherit;">Contact Us</a></h3>
+                <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We’re here to help guide you through your educational and career journey. You can contact us via email, phone.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
