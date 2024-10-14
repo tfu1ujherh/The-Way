@@ -1,194 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >The Way</title>
-    <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/way.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>The Way</title>
+		<link
+			rel="icon"
+			href="../IMAGES/white.png"
+			type="image/x-icon" />
 
+		<link
+			rel="stylesheet"
+			href="../CSS/way.css" />
 
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="way.html">Home</a></li>
+		<style>
+			/* General Styles */
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
 
-              
-                <!-- Courses Dropdown -->
-                <li class="dropdown">
-                    <a href="courses.html">Courses & Careers</a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-submenu">
-                            <a href="courses.html">Courses</a>
-                            <ul class="dropdown-submenu-menu">
-                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
-                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
-                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="careers.html">Careers</a></li>
+			.navbar {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 20px;
+				background-color: #333;
+				color: white;
+			}
 
-                        
-                        <li><a href="govtjobs.html">Government Jobs</a></li>
+			.nav-links {
+				list-style: none;
+				display: flex;
+				gap: 20px;
+			}
 
-                    </ul>
-                </li>
+			.nav-links li {
+				position: relative;
+			}
 
+			.nav-links a {
+				color: white;
+				text-decoration: none;
+			}
 
+			.dropdown-menu,
+			.dropdown-submenu-menu {
+				display: none;
+				position: absolute;
+				background-color: #444;
+				list-style: none;
+				padding: 10px;
+				top: 100%;
+				left: 0;
+			}
 
-                <li><a href="roadmap.html">Road Maps</a></li>
+			.dropdown:hover .dropdown-menu,
+			.dropdown-submenu:hover .dropdown-submenu-menu {
+				display: block;
+			}
 
+			.dropdown-menu a,
+			.dropdown-submenu-menu a {
+				color: white;
+				text-decoration: none;
+			}
 
-                
+			.user-profile {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
 
-                <!-- Interview Questions Dropdown -->
-                <li class="dropdown">
-                    <a href="interview.html">Interview Questions</a>
-                    <ul class="dropdown-menu">
-                        <!-- Technical Jobs Dropdown -->
-                        <li> <a href="interview.html#technical">Technical</a></li>
-                        <!--  Government Jobs Dropdown -->
-                        <li> <a href="interview.html#governmnet">Government</a></li>
-                           
-                        <li><a href="faq.html">Q&A</a></li> 
-                    </ul>
-                </li>
+			.user-logo {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+			}
 
-                <li><a href="query.html">Queries</a></li>
+			.drop-menu {
+				display: none;
+				position: absolute;
+				background-color: #444;
+				list-style: none;
+				padding: 10px;
+				top: 100%;
+				right: 0;
+			}
 
+			.user-profile:hover .drop-menu {
+				display: block;
+			}
 
-            </ul>
-        </nav>
-        <div class="user-profile">
-            <img src="../IMAGES/userlogo.jpg" alt="User Logo" class="user-logo" id="user-icon">
-            <span class="user-name">Ariga Shankar</span>
-            <div class="drop-menu" id="drop-menu">
-                <a href="landing.html" class="drop-item">Logout</a>
-                <a href="#" class="drop-item">Delete Account</a>
-            </div>
-        </div>
-       
-        
-        
-    </header>
+			.image-banner {
+				position: relative;
+				text-align: center;
+				color: white;
+			}
 
+			.image-banner img {
+				width: 100%;
+				height: auto;
+			}
 
-    <div class="image-banner">
-        
-        <img src="../IMAGES/logo7.jpeg" alt="Banner Image">
-        <div class="banner-text">
-            <h1>Lighting the  Way to Your Dream Career</h1>
-            <p>Welcome to The Way, your ultimate destination for navigating the complex and exciting journey of education and career choices.</p>
-            <a href="#hero"><button>Explore now</button></a>
-        </div>
-    </div>
+			.banner-text {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 
-    
+			.cards-section {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+				padding: 20px;
+			}
 
+			.card {
+				flex: 1 1 calc(33.333% - 40px);
+				background-color: #f4f4f4;
+				padding: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
 
+			.footer {
+				background-color: #333;
+				color: white;
+				padding: 20px;
+			}
 
-    <section class="hero" id="hero">
-        <h1>Welcome to Career Pathways</h1>
-        <p>Your guide to educational and career opportunities after school and beyond.</p>
-    </section>
+			.footer-container {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
 
-    
+			.footer-section {
+				flex: 1 1 calc(33.333% - 40px);
+				margin: 20px;
+			}
 
-    <section class="cards-section" >
-        <div class="card">
-            <h2>Courses After 10th</h2>
-            <p>Explore different streams, vocational courses, and integrated programs available after 10th grade.</p>
-            <a href="../Courses/10thcourses.html" class="btn" >Learn More</a>
-        </div>
-        <div class="card">
-            <h2>Courses After 12th</h2>
-            <p>Detailed career options based on different streams and professional courses after 12th grade.</p>
-            <a href="../Courses/12thcourses.html" class="btn"  >Learn More  </a>
-        </div>
-        <div class="card">
-            <h2>Courses After Under Graduation</h2>
-            <p>Detailed career options based on different streams and professional courses after Under Graduation.</p>
-            <a href="../Courses/graduation.html" class="btn" >Learn More</a>
-        </div>
-        <div class="card">
-            <h2>Government Jobs</h2>
-            <p>Information on government job opportunities after 10th, 12th, and graduation.</p>
-            <a href="govtjobs.html" class="btn">Learn More</a>
-        </div>
-        <div class="card">
-            <h2>Careers</h2>
-            <p>Career finding is the process of exploring and discovering the right job or career path that aligns with your skills, interests, and goals</p>
-            <a href="careers.html" class="btn" >Learn More</a>
-        </div>
-        <div class="card">
-            <h2>Road Maps</h2>
-            <p>A roadmap for subject finding guides you through selecting the right subjects that match your interests and future career goals.</p>
-            <a href="roadmap.html" class="btn" >Learn More</a>
-        </div>
-        <div class="card">
-            <h2>Interview Questions</h2>
-            <p>Interview questions involves researching and gathering the most relevant questions to help you prepare effectively for an interview.</p>
-            <a href="interview.html" class="btn" >Learn More</a>
-        </div>
-        
-    </section>
+			.social-icons img {
+				width: 30px;
+				height: 30px;
+				margin-right: 10px;
+			}
 
-    <section class="about-section">
-        <h2>About The Way</h2>
-        <p>Welcome to <strong>The Way</strong>, your ultimate destination for navigating the complex and exciting journey of education and career choices. Our platform is dedicated to empowering students, guiding them through the myriad of opportunities available after school, and helping them carve out a successful future.</p>
-        <p>At The Way, we believe that every student deserves access to the best information and resources to make informed decisions about their career paths. Whether you're exploring courses after the 10th or 12th grade, seeking insights into government job opportunities, or preparing for competitive exams and interviews, we've got you covered.</p>
-        <p>Our goal is to provide comprehensive, easy-to-understand guidance that helps you identify and pursue your passions. From detailed course descriptions and career options to practical roadmaps and expert advice, The Way is your trusted companion in this journey.</p>
-        <p>Let us help you find your way to success!</p>
-    </section>
-    
+			/* Responsive Styles */
+			@media (max-width: 768px) {
+				.nav-links {
+					flex-direction: column;
+					gap: 10px;
+				}
 
+				.cards-section {
+					flex-direction: column;
+				}
 
-    
+				.card {
+					flex: 1 1 100%;
+				}
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3><a href="contact.html" style="text-decoration: none; color: inherit;">Contact Us</a></h3>
-                <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We’re here to help guide you through your educational and career journey. You can contact us via email, phone.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="way.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="govtjobs.html">Government Jobs</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="roadmap.html">Road Maps</a></li>
-                    <li><a href="interview.html">Interview Questions</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"><img src="../IMAGES/face.png" alt="Facebook"></a>
-                    <a href="https://x.com/"><img src="../IMAGES/twi.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/"><img src="../IMAGES/insta.png" alt="Instagram"></a>
-                    <a href="https://www.linkedin.com/login?fromSignIn=true"><img src="../IMAGES/link.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
-        </div>
-    </footer>
-    
+				.footer-container {
+					flex-direction: column;
+				}
 
-    <script src="../JS/way.js"></script>
+				.footer-section {
+					flex: 1 1 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="navbar">
+			<div class="logo">
+				<a href="way.html"
+					><img
+						src="../IMAGES/white.png"
+						alt="Logo"
+						height="60px"
+						width="60px"
+				/></a>
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="way.html">Home</a></li>
 
-    
-    <div>
+					<!-- Courses Dropdown -->
+					<li class="dropdown">
+						<a href="courses.html">Courses & Careers</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="courses.html">Courses</a>
+								<ul class="dropdown-submenu-menu">
+									<li>
+										<a href="../Courses/10thcourses.html">Courses after 10th</a>
+									</li>
+									<li>
+										<a href="../Courses/12thcourses.html">Courses after 12th</a>
+									</li>
+									<li>
+										<a href="../Courses/graduation.html"
+											>Courses after Graduation</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li><a href="careers.html">Careers</a></li>
 
-    </div>
+							<li><a href="govtjobs.html">Government Jobs</a></li>
+						</ul>
+					</li>
 
-</body>
+					<li><a href="roadmap.html">Road Maps</a></li>
+
+					<!-- Interview Questions Dropdown -->
+					<li class="dropdown">
+						<a href="interview.html">Interview Questions</a>
+						<ul class="dropdown-menu">
+							<!-- Technical Jobs Dropdown -->
+							<li><a href="interview.html#technical">Technical</a></li>
+							<!--  Government Jobs Dropdown -->
+							<li><a href="interview.html#governmnet">Government</a></li>
+
+							<li><a href="faq.html">Q&A</a></li>
+						</ul>
+					</li>
+
+					<li><a href="query.html">Queries</a></li>
+				</ul>
+			</nav>
+			<div class="user-profile">
+				<img
+					src="../IMAGES/userlogo.jpg"
+					alt="User Logo"
+					class="user-logo"
+					id="user-icon" />
+				<span class="user-name">Ariga Shankar</span>
+				<div
+					class="drop-menu"
+					id="drop-menu">
+					<a
+						href="landing.html"
+						class="drop-item"
+						>Logout</a
+					>
+					<a
+						href="#"
+						class="drop-item"
+						>Delete Account</a
+					>
+				</div>
+			</div>
+		</header>
+
+		<div class="image-banner">
+			<img
+				src="../IMAGES/logo7.jpeg"
+				alt="Banner Image" />
+			<div class="banner-text">
+				<h1>Lighting the Way to Your Dream Career</h1>
+				<p>
+					Welcome to The Way, your ultimate destination for navigating the
+					complex and exciting journey of education and career choices.
+				</p>
+				<a href="#hero"><button>Explore now</button></a>
+			</div>
+		</div>
+
+		<section
+			class="hero"
+			id="hero">
+			<h1>Welcome to Career Pathways</h1>
+			<p>
+				Your guide to educational and career opportunities after school and
+				beyond.
+			</p>
+		</section>
+
+		<section class="cards-section">
+			<div class="card">
+				<h2>Courses After 10th</h2>
+				<p>
+					Explore different streams, vocational courses, and integrated programs
+					available after 10th grade.
+				</p>
+				<a
+					href="../Courses/10thcourses.html"
+					class="btn"
+					>Learn More</a
+				>
+			</div>
+			<div class="card">
+				<h2>Courses After 12th</h2>
+				<p>
+					Detailed career options based on different streams and professional
+					courses after 12th grade.
+				</p>
+				<a
+					href="../Courses/12thcourses.html"
+					class="btn"
+					>Learn More
+				</a>
+			</div>
+			<div class="card">
+				<h2>Courses After Under Graduation</h2>
+				<p>
+					Detailed career options based on different streams and professional
+					courses after Under Graduation.
+				</p>
+				<a
+					href="../Courses/graduation.html"
+					class="btn"
+					>Learn More</a
+				>
+			</div>
+			<div class="card">
+				<h2>Government Jobs</h2>
+				<p>
+					Information on government job opportunities after 10th, 12th, and
+					graduation.
+				</p>
+				<a
+					href="govtjobs.html"
+					class="btn"
+					>Learn More</a
+				>
+			</div>
+			<div class="card">
+				<h2>Careers</h2>
+				<p>
+					Career finding is the process of exploring and discovering the right
+					job or career path that aligns with your skills, interests, and goals
+				</p>
+				<a
+					href="careers.html"
+					class="btn"
+					>Learn More</a
+				>
+			</div>
+			<div class="card">
+				<h2>Road Maps</h2>
+				<p>
+					A roadmap for subject finding guides you through selecting the right
+					subjects that match your interests and future career goals.
+				</p>
+				<a
+					href="roadmap.html"
+					class="btn"
+					>Learn More</a
+				>
+			</div>
+			<div class="card">
+				<h2>Interview Questions</h2>
+				<p>
+					Interview questions involves researching and gathering the most
+					relevant questions to help you prepare effectively for an interview.
+				</p>
+				<a
+					href="interview.html"
+					class="btn"
+					>Learn More</a
+				>
+			</div>
+		</section>
+
+		<section class="about-section">
+			<h2>About The Way</h2>
+			<p>
+				Welcome to <strong>The Way</strong>, your ultimate destination for
+				navigating the complex and exciting journey of education and career
+				choices. Our platform is dedicated to empowering students, guiding them
+				through the myriad of opportunities available after school, and helping
+				them carve out a successful future.
+			</p>
+			<p>
+				At The Way, we believe that every student deserves access to the best
+				information and resources to make informed decisions about their career
+				paths. Whether you're exploring courses after the 10th or 12th grade,
+				seeking insights into government job opportunities, or preparing for
+				competitive exams and interviews, we've got you covered.
+			</p>
+			<p>
+				Our goal is to provide comprehensive, easy-to-understand guidance that
+				helps you identify and pursue your passions. From detailed course
+				descriptions and career options to practical roadmaps and expert advice,
+				The Way is your trusted companion in this journey.
+			</p>
+			<p>Let us help you find your way to success!</p>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-section">
+					<h3>
+						<a
+							href="contact.html"
+							style="text-decoration: none; color: inherit"
+							>Contact Us</a
+						>
+					</h3>
+					<p>
+						If you have any questions, feedback, or need assistance, feel free
+						to reach out to us. We’re here to help guide you through your
+						educational and career journey. You can contact us via email, phone.
+					</p>
+				</div>
+				<div class="footer-section">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="way.html">Home</a></li>
+						<li><a href="courses.html">Courses</a></li>
+						<li><a href="govtjobs.html">Government Jobs</a></li>
+						<li><a href="careers.html">Careers</a></li>
+						<li><a href="roadmap.html">Road Maps</a></li>
+						<li><a href="interview.html">Interview Questions</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a
+							href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"
+							><img
+								src="../IMAGES/face.png"
+								alt="Facebook"
+						/></a>
+						<a href="https://x.com/"
+							><img
+								src="../IMAGES/twi.png"
+								alt="Twitter"
+						/></a>
+						<a href="https://www.instagram.com/"
+							><img
+								src="../IMAGES/insta.png"
+								alt="Instagram"
+						/></a>
+						<a href="https://www.linkedin.com/login?fromSignIn=true"
+							><img
+								src="../IMAGES/link.png"
+								alt="LinkedIn"
+						/></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
+			</div>
+		</footer>
+
+		<script src="../JS/way.js"></script>
+
+		<div></div>
+	</body>
 </html>

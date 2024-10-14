@@ -1,39 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> Login</title>
-  <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="ie=edge" />
+		<title>Login</title>
+		<link
+			rel="icon"
+			href="../IMAGES/white.png"
+			type="image/x-icon" />
 
-  <link rel="stylesheet" href="../CSS/login.css">
-</head>
-<body>
-  <div class="container">
-    <div class="login-box">
-      <h2>Login</h2>
-      <form id="loginForm">
-        <div class="user-box">
-          <input type="text" name="username" required="" placeholder="Username">
-        </div>
-        <div class="user-box">
-          <input type="password" name="password" required="" placeholder="Password">
-        </div>
-        <button class="login-btn" type="button" onclick="validateLogin()">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </button>
-        <div class="options">
-          <a href="signup.html" class="create-account">Create Account</a>
-          <a href="#" class="forgot-password">Forgot Password?</a>
-        </div>
-      </form>
-    </div>
-  </div>
-  <script src="../JS/login.js"></script>
-</body>
+		<link
+			rel="stylesheet"
+			href="../CSS/login.css" />
+		<style>
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #f2f2f2;
+			}
+
+			.container {
+				width: 100%;
+				max-width: 400px;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+
+			.login-box {
+				background: #fff;
+				padding: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+			}
+
+			.user-box {
+				margin-bottom: 20px;
+			}
+
+			.user-box input {
+				width: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+
+			.login-btn {
+				width: 100%;
+				padding: 10px;
+				background: #007bff;
+				border: none;
+				color: #fff;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			.login-btn:hover {
+				background: #0056b3;
+			}
+
+			.options {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 10px;
+			}
+
+			.options a {
+				color: #007bff;
+				text-decoration: none;
+			}
+
+			.options a:hover {
+				text-decoration: underline;
+			}
+
+			@media (max-width: 600px) {
+				.login-box {
+					padding: 15px;
+				}
+
+				.user-box input {
+					padding: 8px;
+				}
+
+				.login-btn {
+					padding: 8px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="login-box">
+				<h2>Login</h2>
+				<form id="loginForm">
+					<div class="user-box">
+						<input
+							type="text"
+							name="username"
+							required=""
+							placeholder="Username" />
+					</div>
+					<div class="user-box">
+						<input
+							type="password"
+							name="password"
+							required=""
+							placeholder="Password" />
+					</div>
+					<button
+						class="login-btn"
+						type="button"
+						onclick="validateLogin()">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						Submit
+					</button>
+					<div class="options">
+						<a
+							href="signup.html"
+							class="create-account"
+							>Create Account</a
+						>
+						<a
+							href="#"
+							class="forgot-password"
+							>Forgot Password?</a
+						>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="../JS/login.js"></script>
+	</body>
 </html>

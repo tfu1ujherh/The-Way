@@ -7,6 +7,165 @@
     <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../CSS/landing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .auth-buttons a {
+            margin-left: 1rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        .carousel-section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .carousel-content, .carousel-images {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .carousel-content .content-item {
+            margin-bottom: 2rem;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+        }
+
+        .box, .imgcon, .features, .hero-section, .fourthbox, .testimonials, .footer {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .feature-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .feature-card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text, .hero-image {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .metrics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .metric {
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .testimonial {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .auth-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .carousel-section {
+                flex-direction: column;
+            }
+
+            .hero-section {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">

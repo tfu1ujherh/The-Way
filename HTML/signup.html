@@ -1,48 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sign Up </title>
-  <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="ie=edge" />
+		<title>Sign Up</title>
+		<link
+			rel="icon"
+			href="../IMAGES/white.png"
+			type="image/x-icon" />
 
-  <link rel="stylesheet" href="../CSS/signup.css">
-</head>
-<body>
-  <div class="container">
-    <div class="signup-box">
-      <h2>Sign Up</h2>
-      <form id="signupForm">
-        <div class="user-box">
-          <input type="text" name="name" required="" placeholder="Enter your name">
-        </div>
-        <div class="user-box">
-          <input type="email" name="email" required="" placeholder="Enter your e-mail">
-        </div>
-        <div class="user-box">
-          <input type="password" name="password" required="" placeholder="Enter password">
-        </div>
-        <div class="user-box">
-          <input type="password" name="repassword" required="" placeholder="Re-enter password">
-        </div>
-        <div class="user-box">
-          <input type="tel" name="phone" required="" placeholder="Phone Number">
-        </div>
-        <button class="signup-btn" type="button" onclick="validateSignUp()">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Sign up
-        </button>
-        <div class="options">
-          <a href="login.html" class="signin-account">Sign in with your account</a>
-          <a href="#" class="forgot-password">Forgot your password?</a>
-        </div>
-      </form>
-    </div>
-  </div>
-  <script src="../IMAGES/signup.js"></script>
-</body>
+		<link
+			rel="stylesheet"
+			href="../CSS/signup.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background-color: #f0f0f0;
+			}
+
+			.container {
+				width: 100%;
+				max-width: 400px;
+				padding: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				background-color: #fff;
+				border-radius: 8px;
+			}
+
+			.signup-box {
+				width: 100%;
+			}
+
+			.user-box {
+				margin-bottom: 15px;
+			}
+
+			.user-box input {
+				width: 100%;
+				padding: 10px;
+				margin: 5px 0;
+				box-sizing: border-box;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+
+			.signup-btn {
+				width: 100%;
+				padding: 10px;
+				background-color: #4caf50;
+				color: white;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+
+			.signup-btn:hover {
+				background-color: #45a049;
+			}
+
+			.options {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 10px;
+			}
+
+			.options a {
+				color: #4caf50;
+				text-decoration: none;
+			}
+
+			.options a:hover {
+				text-decoration: underline;
+			}
+
+			@media (max-width: 600px) {
+				.container {
+					padding: 10px;
+				}
+
+				.signup-btn {
+					padding: 8px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="signup-box">
+				<h2>Sign Up</h2>
+				<form id="signupForm">
+					<div class="user-box">
+						<input
+							type="text"
+							name="name"
+							required=""
+							placeholder="Enter your name" />
+					</div>
+					<div class="user-box">
+						<input
+							type="email"
+							name="email"
+							required=""
+							placeholder="Enter your e-mail" />
+					</div>
+					<div class="user-box">
+						<input
+							type="password"
+							name="password"
+							required=""
+							placeholder="Enter password" />
+					</div>
+					<div class="user-box">
+						<input
+							type="password"
+							name="repassword"
+							required=""
+							placeholder="Re-enter password" />
+					</div>
+					<div class="user-box">
+						<input
+							type="tel"
+							name="phone"
+							required=""
+							placeholder="Phone Number" />
+					</div>
+					<button
+						class="signup-btn"
+						type="button"
+						onclick="validateSignUp()">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						Sign up
+					</button>
+					<div class="options">
+						<a
+							href="login.html"
+							class="signin-account"
+							>Sign in with your account</a
+						>
+						<a
+							href="#"
+							class="forgot-password"
+							>Forgot your password?</a
+						>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="../IMAGES/signup.js"></script>
+	</body>
 </html>

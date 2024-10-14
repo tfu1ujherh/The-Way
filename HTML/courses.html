@@ -1,151 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
-    <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/courses.css">
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="way.html">Home</a></li>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Courses</title>
+		<link
+			rel="icon"
+			href="../IMAGES/white.png"
+			type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="../CSS/courses.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<style>
+			/* General Styles */
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
 
-              
-                <!-- Courses Dropdown -->
-                <li class="dropdown">
-                    <a href="courses.html">Courses & Careers</a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-submenu">
-                            <a href="courses.html">Courses</a>
-                            <ul class="dropdown-submenu-menu">
-                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
-                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
-                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="careers.html">Careers</a></li>
+			.navbar {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 20px;
+				background-color: #333;
+				color: white;
+			}
 
-                        
-                        <li><a href="govtjobs.html">Government Jobs</a></li>
+			.nav-links {
+				list-style: none;
+				display: flex;
+				gap: 15px;
+			}
 
-                    </ul>
-                </li>
+			.nav-links li {
+				position: relative;
+			}
 
+			.nav-links a {
+				color: white;
+				text-decoration: none;
+			}
 
+			.dropdown-menu,
+			.dropdown-submenu-menu {
+				display: none;
+				position: absolute;
+				background-color: #444;
+				list-style: none;
+				padding: 10px;
+				margin: 0;
+			}
 
-                <li><a href="roadmap.html">Road Maps</a></li>
+			.dropdown:hover .dropdown-menu,
+			.dropdown-submenu:hover .dropdown-submenu-menu {
+				display: block;
+			}
 
+			.user-profile {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
 
-                
+			.user-logo {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+			}
 
-                <!-- Interview Questions Dropdown -->
-                <li class="dropdown">
-                    <a href="interview.html">Interview Questions</a>
-                    <ul class="dropdown-menu">
-                        <!-- Technical Jobs Dropdown -->
-                        <li> <a href="interview.html#technical">Technical</a></li>
-                        <!--  Government Jobs Dropdown -->
-                        <li> <a href="interview.html#governmnet">Government</a></li>
-                           
-                        <li><a href="faq.html">Q&A</a></li> 
-                    </ul>
-                </li>
+			.drop-menu {
+				display: none;
+				position: absolute;
+				background-color: #444;
+				list-style: none;
+				padding: 10px;
+				margin: 0;
+			}
 
-                <li><a href="query.html">Queries</a></li>
+			.user-profile:hover .drop-menu {
+				display: block;
+			}
 
+			.carousel-container {
+				width: 100%;
+				overflow: hidden;
+			}
 
-            </ul>
-        </nav>
-        <div class="user-profile">
-            <img src="../IMAGES/userlogo.jpg" alt="User Logo" class="user-logo" id="user-icon">
-            <span class="user-name">Ariga Shankar</span>
-            <div class="drop-menu" id="drop-menu">
-                <a href="login.html" class="drop-item">Logout</a>
-                <a href="#" class="drop-item">Delete Account</a>
-            </div>
-        </div>
-     
-        
-        
-    </header>
+			.carousel-container img {
+				width: 100%;
+				height: auto;
+			}
 
+			.button-container {
+				text-align: center;
+				padding: 20px;
+			}
 
-    <section id="carousel">
-        <div class="carousel-container">
-            <img id="carouselImage" src="../IMAGES/banner_1.png" alt="Carousel Image">
-        </div>
-    </section>
+			.image-container {
+				text-align: center;
+				padding: 20px;
+			}
 
-    <div class="button-container">
-        <p class="button-text">Paving a path for your Bright future</p>
-    </div>
+			.sun-image {
+				width: 100%;
+				max-width: 600px;
+				height: auto;
+			}
 
-    <div class="image-container">
-        <img src="../IMAGES/sun.webp" alt="Sun image" class="sun-image">
-    </div>
+			.container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 20px;
+				padding: 20px;
+			}
 
-    <div class="container">
-        <div class="box">
-            <div class="box-content">
-                <h1>After 10th Class</h1>
-                <h5>Career Counseling Services for Class 10th students contain Stream Selection, Career option Exploration, and everything a Class 10th student needs to gain confidence.</h5>
-                <a href="../Courses/10thcourses.html" class="box-btn">Explore Now</a>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h1>After 12th Grade</h1>
-                <h5>Career Counseling Services for 11th & 12th students contain exploration of career options, colleges, competitive exams, and admission assistance.</h5>
-                <a href="../Courses/12thcourses.html" class="box-btn">Explore Now</a>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h1>After Graduation</h1>
-                <h5>Get detailed information on top colleges in India and admission news. Get alerts for results, cutoffs, and forms for top entrance, government, and banking exams.</h5>
-                <a href="../Courses/graduation.html" class="box-btn">Explore Now</a>
-            </div>
-        </div>
-    </div>
+			.box {
+				flex: 1 1 calc(33.333% - 40px);
+				box-sizing: border-box;
+				padding: 20px;
+				background-color: #f4f4f4;
+				border-radius: 10px;
+				text-align: center;
+			}
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3><a href="contact.html" style="text-decoration: none; color: inherit;">Contact Us</a></h3>
-                <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We’re here to help guide you through your educational and career journey. You can contact us via email, phone.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="way.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="govtjobs.html">Government Jobs</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="roadmap.html">Road Maps</a></li>
-                    <li><a href="interview.html">Interview Questions</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"><img src="../IMAGES/face.png" alt="Facebook"></a>
-                    <a href="https://x.com/"><img src="../IMAGES/twi.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/"><img src="../IMAGES/insta.png" alt="Instagram"></a>
-                    <a href="https://www.linkedin.com/login?fromSignIn=true"><img src="../IMAGES/link.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
-        </div>
-    </footer>
+			.box-content h1 {
+				font-size: 1.5em;
+			}
 
-    <script src="../JS/courses.js"></script>
-</body>
+			.box-content h5 {
+				font-size: 1em;
+			}
+
+			.box-btn {
+				display: inline-block;
+				padding: 10px 20px;
+				background-color: #333;
+				color: white;
+				text-decoration: none;
+				border-radius: 5px;
+			}
+
+			.footer {
+				background-color: #333;
+				color: white;
+				padding: 20px;
+			}
+
+			.footer-container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			.footer-section {
+				flex: 1 1 calc(33.333% - 40px);
+				box-sizing: border-box;
+				padding: 20px;
+			}
+
+			.footer-section h3 {
+				margin-top: 0;
+			}
+
+			.footer-section ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.footer-section ul li {
+				margin-bottom: 10px;
+			}
+
+			.footer-section ul li a {
+				color: white;
+				text-decoration: none;
+			}
+
+			.social-icons {
+				display: flex;
+				gap: 10px;
+			}
+
+			.social-icons img {
+				width: 30px;
+				height: 30px;
+			}
+
+			.footer-bottom {
+				text-align: center;
+				padding: 10px;
+				background-color: #222;
+			}
+
+			/* Responsive Styles */
+			@media (max-width: 768px) {
+				.nav-links {
+					flex-direction: column;
+					gap: 10px;
+				}
+
+				.container {
+					flex-direction: column;
+					gap: 20px;
+				}
+
+				.box {
+					flex: 1 1 100%;
+				}
+
+				.footer-container {
+					flex-direction: column;
+					gap: 20px;
+				}
+
+				.footer-section {
+					flex: 1 1 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="navbar">
+			<div class="logo">
+				<a href="way.html"
+					><img
+						src="../IMAGES/white.png"
+						alt="Logo"
+						height="60px"
+						width="60px"
+				/></a>
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="way.html">Home</a></li>
+
+					<!-- Courses Dropdown -->
+					<li class="dropdown">
+						<a href="courses.html">Courses & Careers</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="courses.html">Courses</a>
+								<ul class="dropdown-submenu-menu">
+									<li>
+										<a href="../Courses/10thcourses.html">Courses after 10th</a>
+									</li>
+									<li>
+										<a href="../Courses/12thcourses.html">Courses after 12th</a>
+									</li>
+									<li>
+										<a href="../Courses/graduation.html"
+											>Courses after Graduation</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li><a href="careers.html">Careers</a></li>
+
+							<li><a href="govtjobs.html">Government Jobs</a></li>
+						</ul>
+					</li>
+
+					<li><a href="roadmap.html">Road Maps</a></li>
+
+					<!-- Interview Questions Dropdown -->
+					<li class="dropdown">
+						<a href="interview.html">Interview Questions</a>
+						<ul class="dropdown-menu">
+							<!-- Technical Jobs Dropdown -->
+							<li><a href="interview.html#technical">Technical</a></li>
+							<!--  Government Jobs Dropdown -->
+							<li><a href="interview.html#governmnet">Government</a></li>
+
+							<li><a href="faq.html">Q&A</a></li>
+						</ul>
+					</li>
+
+					<li><a href="query.html">Queries</a></li>
+				</ul>
+			</nav>
+			<div class="user-profile">
+				<img
+					src="../IMAGES/userlogo.jpg"
+					alt="User Logo"
+					class="user-logo"
+					id="user-icon" />
+				<span class="user-name">Ariga Shankar</span>
+				<div
+					class="drop-menu"
+					id="drop-menu">
+					<a
+						href="login.html"
+						class="drop-item"
+						>Logout</a
+					>
+					<a
+						href="#"
+						class="drop-item"
+						>Delete Account</a
+					>
+				</div>
+			</div>
+		</header>
+
+		<section id="carousel">
+			<div class="carousel-container">
+				<img
+					id="carouselImage"
+					src="../IMAGES/banner_1.png"
+					alt="Carousel Image" />
+			</div>
+		</section>
+
+		<div class="button-container">
+			<p class="button-text">Paving a path for your Bright future</p>
+		</div>
+
+		<div class="image-container">
+			<img
+				src="../IMAGES/sun.webp"
+				alt="Sun image"
+				class="sun-image" />
+		</div>
+
+		<div class="container">
+			<div class="box">
+				<div class="box-content">
+					<h1>After 10th Class</h1>
+					<h5>
+						Career Counseling Services for Class 10th students contain Stream
+						Selection, Career option Exploration, and everything a Class 10th
+						student needs to gain confidence.
+					</h5>
+					<a
+						href="../Courses/10thcourses.html"
+						class="box-btn"
+						>Explore Now</a
+					>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-content">
+					<h1>After 12th Grade</h1>
+					<h5>
+						Career Counseling Services for 11th & 12th students contain
+						exploration of career options, colleges, competitive exams, and
+						admission assistance.
+					</h5>
+					<a
+						href="../Courses/12thcourses.html"
+						class="box-btn"
+						>Explore Now</a
+					>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-content">
+					<h1>After Graduation</h1>
+					<h5>
+						Get detailed information on top colleges in India and admission
+						news. Get alerts for results, cutoffs, and forms for top entrance,
+						government, and banking exams.
+					</h5>
+					<a
+						href="../Courses/graduation.html"
+						class="box-btn"
+						>Explore Now</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-section">
+					<h3>
+						<a
+							href="contact.html"
+							style="text-decoration: none; color: inherit"
+							>Contact Us</a
+						>
+					</h3>
+					<p>
+						If you have any questions, feedback, or need assistance, feel free
+						to reach out to us. We’re here to help guide you through your
+						educational and career journey. You can contact us via email, phone.
+					</p>
+				</div>
+				<div class="footer-section">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="way.html">Home</a></li>
+						<li><a href="courses.html">Courses</a></li>
+						<li><a href="govtjobs.html">Government Jobs</a></li>
+						<li><a href="careers.html">Careers</a></li>
+						<li><a href="roadmap.html">Road Maps</a></li>
+						<li><a href="interview.html">Interview Questions</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a
+							href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"
+							><img
+								src="../IMAGES/face.png"
+								alt="Facebook"
+						/></a>
+						<a href="https://x.com/"
+							><img
+								src="../IMAGES/twi.png"
+								alt="Twitter"
+						/></a>
+						<a href="https://www.instagram.com/"
+							><img
+								src="../IMAGES/insta.png"
+								alt="Instagram"
+						/></a>
+						<a href="https://www.linkedin.com/login?fromSignIn=true"
+							><img
+								src="../IMAGES/link.png"
+								alt="LinkedIn"
+						/></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
+			</div>
+		</footer>
+
+		<script src="../JS/courses.js"></script>
+	</body>
 </html>

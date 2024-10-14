@@ -1,114 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="../CSS/contact.css">
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="way.html">Home</a></li>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us</title>
+		<link
+			rel="stylesheet"
+			href="../CSS/contact.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<style>
+			/* Responsive Styles */
+			@media (max-width: 600px) {
+				.navbar {
+					flex-direction: column;
+					align-items: flex-start;
+				}
 
-              
-                <!-- Courses Dropdown -->
-                <li class="dropdown">
-                    <a href="courses.html">Courses & Careers</a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-submenu">
-                            <a href="courses.html">Courses</a>
-                            <ul class="dropdown-submenu-menu">
-                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
-                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
-                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="careers.html">Careers</a></li>
+				.nav-links {
+					flex-direction: column;
+					width: 100%;
+				}
 
-                        
-                        <li><a href="govtjobs.html">Government Jobs</a></li>
+				.nav-links li {
+					margin: 5px 0;
+				}
 
-                    </ul>
-                </li>
+				.user-profile {
+					margin-top: 10px;
+				}
 
+				.backimg img {
+					height: 200px;
+					object-fit: cover;
+				}
 
+				.big-heading h1 {
+					font-size: 24px;
+				}
 
-                <li><a href="roadmap.html">Road Maps</a></li>
+				.content-container {
+					flex-direction: column;
+					padding: 10px;
+				}
 
+				.contact-info,
+				.contact-form {
+					flex: 1 1 100%;
+					margin: 5px 0;
+				}
 
-                
+				.contact-form label,
+				.contact-form input,
+				.contact-form textarea,
+				.contact-form button {
+					width: 100%;
+					margin: 5px 0;
+				}
+			}
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
 
-                <!-- Interview Questions Dropdown -->
-                <li class="dropdown">
-                    <a href="interview.html">Interview Questions</a>
-                    <ul class="dropdown-menu">
-                        <!-- Technical Jobs Dropdown -->
-                        <li> <a href="interview.html#technical">Technical</a></li>
-                        <!--  Government Jobs Dropdown -->
-                        <li> <a href="interview.html#governmnet">Government</a></li>
-                           
-                        <li><a href="faq.html">Q&A</a></li> 
-                    </ul>
-                </li>
+			.navbar {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 20px;
+				background-color: #333;
+				color: white;
+			}
 
-                <li><a href="query.html">Queries</a></li>
+			.nav-links {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+			}
 
+			.nav-links li {
+				margin: 0 10px;
+			}
 
-            </ul>
-        </nav>
-        <div class="user-profile">
-            <img src="../IMAGES/userlogo.jpg" alt="User Logo" class="user-logo" id="user-icon">
-            <span class="user-name">Ariga Shankar</span>
-            <div class="drop-menu" id="drop-menu">
-                <a href="login.html" class="drop-item">Logout</a>
-                <a href="#" class="drop-item">Delete Account</a>
-            </div>
-        </div>
-     
-        
-        
-    </header>
-    <div class="backimg">
-        <img src="../IMAGES/img1.jpeg" alt="Background Image">
-        <!-- Big Heading for Contact Us -->
-        <div class="big-heading">
-            <h1>Contact Us</h1>
-        </div>
-        <div class="content-container">
-            <!-- Left side: Contact Info -->
-            <div class="contact-info">
-                <h2>Get In Touch</h2>
-                <h3>Location</h3>
-                <p>Vadodara , Parul university <br> CV Raman Building <br>Gujarat - 391760</p>
-                
-                <h3>Contact Us</h3>
-                <p>Email id: support@theway.com<br>Phone: +91 9768532980</p>
-            </div>
+			.nav-links a {
+				color: white;
+				text-decoration: none;
+			}
 
-            <!-- Right side: Form -->
-            <div class="contact-form">
-                <form id="contactForm">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+			.dropdown-menu,
+			.dropdown-submenu-menu {
+				display: none;
+				position: absolute;
+				background-color: #333;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+			.dropdown:hover .dropdown-menu,
+			.dropdown-submenu:hover .dropdown-submenu-menu {
+				display: block;
+			}
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+			.user-profile {
+				display: flex;
+				align-items: center;
+			}
 
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <script src="../JS/contact.js"></script>
-</body>
+			.user-logo {
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+
+			.drop-menu {
+				display: none;
+				position: absolute;
+				background-color: #333;
+				list-style: none;
+				padding: 10px;
+				margin: 0;
+			}
+
+			.user-profile:hover .drop-menu {
+				display: block;
+			}
+
+			.backimg {
+				position: relative;
+				text-align: center;
+				color: white;
+			}
+
+			.backimg img {
+				width: 100%;
+				height: auto;
+			}
+
+			.big-heading {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.content-container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				padding: 20px;
+			}
+
+			.contact-info,
+			.contact-form {
+				flex: 1 1 300px;
+				margin: 10px;
+			}
+
+			@media (max-width: 768px) {
+				.nav-links {
+					flex-direction: column;
+				}
+
+				.content-container {
+					flex-direction: column;
+				}
+
+				.contact-info,
+				.contact-form {
+					flex: 1 1 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="navbar">
+			<div class="logo">
+				<a href="way.html"
+					><img
+						src="../IMAGES/white.png"
+						alt="Logo"
+						height="60px"
+						width="60px"
+				/></a>
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="way.html">Home</a></li>
+
+					<!-- Courses Dropdown -->
+					<li class="dropdown">
+						<a href="courses.html">Courses & Careers</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="courses.html">Courses</a>
+								<ul class="dropdown-submenu-menu">
+									<li>
+										<a href="../Courses/10thcourses.html">Courses after 10th</a>
+									</li>
+									<li>
+										<a href="../Courses/12thcourses.html">Courses after 12th</a>
+									</li>
+									<li>
+										<a href="../Courses/graduation.html"
+											>Courses after Graduation</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li><a href="careers.html">Careers</a></li>
+
+							<li><a href="govtjobs.html">Government Jobs</a></li>
+						</ul>
+					</li>
+
+					<li><a href="roadmap.html">Road Maps</a></li>
+
+					<!-- Interview Questions Dropdown -->
+					<li class="dropdown">
+						<a href="interview.html">Interview Questions</a>
+						<ul class="dropdown-menu">
+							<!-- Technical Jobs Dropdown -->
+							<li><a href="interview.html#technical">Technical</a></li>
+							<!--  Government Jobs Dropdown -->
+							<li><a href="interview.html#governmnet">Government</a></li>
+
+							<li><a href="faq.html">Q&A</a></li>
+						</ul>
+					</li>
+
+					<li><a href="query.html">Queries</a></li>
+				</ul>
+			</nav>
+			<div class="user-profile">
+				<img
+					src="../IMAGES/userlogo.jpg"
+					alt="User Logo"
+					class="user-logo"
+					id="user-icon" />
+				<span class="user-name">Ariga Shankar</span>
+				<div
+					class="drop-menu"
+					id="drop-menu">
+					<a
+						href="login.html"
+						class="drop-item"
+						>Logout</a
+					>
+					<a
+						href="#"
+						class="drop-item"
+						>Delete Account</a
+					>
+				</div>
+			</div>
+		</header>
+		<div class="backimg">
+			<img
+				src="../IMAGES/img1.jpeg"
+				alt="Background Image" />
+			<!-- Big Heading for Contact Us -->
+			<div class="big-heading">
+				<h1>Contact Us</h1>
+			</div>
+			<div class="content-container">
+				<!-- Left side: Contact Info -->
+				<div class="contact-info">
+					<h2>Get In Touch</h2>
+					<h3>Location</h3>
+					<p>
+						Vadodara , Parul university <br />
+						CV Raman Building <br />Gujarat - 391760
+					</p>
+
+					<h3>Contact Us</h3>
+					<p>Email id: support@theway.com<br />Phone: +91 9768532980</p>
+				</div>
+
+				<!-- Right side: Form -->
+				<div class="contact-form">
+					<form id="contactForm">
+						<label for="name">Name:</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Your Name"
+							required />
+
+						<label for="email">Email:</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Your Email"
+							required />
+
+						<label for="message">Message:</label>
+						<textarea
+							id="message"
+							name="message"
+							placeholder="Your Message"
+							required></textarea>
+
+						<button type="submit">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="../JS/contact.js"></script>
+	</body>
 </html>
-
-

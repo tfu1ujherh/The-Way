@@ -1,317 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road Maps</title>
-    <link rel="icon" href="../IMAGES/white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/roadmap.css"> <!-- Link to the same CSS file -->
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="way.html"><img src="../IMAGES/white.png" alt="Logo" height="60px" width="60px"></a> 
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="way.html">Home</a></li>
+	<head>
+		<meta charset="UTF-8" />
 
-              
-                <!-- Courses Dropdown -->
-                <li class="dropdown">
-                    <a href="courses.html">Courses & Careers</a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-submenu">
-                            <a href="courses.html">Courses</a>
-                            <ul class="dropdown-submenu-menu">
-                                <li><a href="../Courses/10thcourses.html">Courses after 10th</a></li>
-                                <li><a href="../Courses/12thcourses.html">Courses after 12th</a></li>
-                                <li><a href="../Courses/graduation.html">Courses after Graduation</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="careers.html">Careers</a></li>
+		<title>Road Maps</title>
+		<link
+			rel="icon"
+			href="../IMAGES/white.png"
+			type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="../CSS/roadmap.css" />
+		<!-- Link to the same CSS file -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<style>
+			/* General Styles */
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
 
-                        
-                        <li><a href="govtjobs.html">Government Jobs</a></li>
+			.navbar {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 20px;
+				background-color: #333;
+				color: white;
+			}
 
-                    </ul>
-                </li>
+			.nav-links {
+				list-style: none;
+				display: flex;
+				gap: 15px;
+			}
 
+			.nav-links li {
+				display: inline;
+			}
 
+			.nav-links a {
+				color: white;
+				text-decoration: none;
+			}
 
-                <li><a href="roadmap.html">Road Maps</a></li>
+			.dropdown-menu,
+			.dropdown-submenu-menu {
+				display: none;
+				position: absolute;
+				background-color: #333;
+				list-style: none;
+				padding: 10px;
+				margin: 0;
+			}
 
+			.dropdown:hover .dropdown-menu,
+			.dropdown-submenu:hover .dropdown-submenu-menu {
+				display: block;
+			}
 
-                
+			.dropdown-menu li,
+			.dropdown-submenu-menu li {
+				padding: 5px 0;
+			}
 
-                <!-- Interview Questions Dropdown -->
-                <li class="dropdown">
-                    <a href="interview.html">Interview Questions</a>
-                    <ul class="dropdown-menu">
-                        <!-- Technical Jobs Dropdown -->
-                        <li> <a href="interview.html#technical">Technical</a></li>
-                        <!--  Government Jobs Dropdown -->
-                        <li> <a href="interview.html#governmnet">Government</a></li>
-                           
-                        <li><a href="faq.html">Q&A</a></li> 
-                    </ul>
-                </li>
+			.dropdown-menu a,
+			.dropdown-submenu-menu a {
+				color: white;
+			}
 
-                <li><a href="query.html">Queries</a></li>
+			.user-profile {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
 
+			.user-logo {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+			}
 
-            </ul>
-        </nav>
-        <div class="user-profile">
-            <img src="../IMAGES/userlogo.jpg" alt="User Logo" class="user-logo" id="user-icon">
-            <span class="user-name">Ariga Shankar</span>
-            <div class="drop-menu" id="drop-menu">
-                <a href="login.html" class="drop-item">Logout</a>
-                <a href="#" class="drop-item">Delete Account</a>
-            </div>
-        </div>
-       
-        
-        
-    </header>
+			.drop-menu {
+				display: none;
+				position: absolute;
+				background-color: #333;
+				list-style: none;
+				padding: 10px;
+				margin: 0;
+			}
 
-   <!-- Branding Header Container -->
-   <section class="branding-header">
-    <h1>Your journey to a fulfilling career starts with a clear roadmap!</h1>
-    <p>Embrace the Path Forward</p>
-</section>
+			.user-profile:hover .drop-menu {
+				display: block;
+			}
 
-<!-- Main Content Container -->
-<main class="main-content">
-    <!-- Extra Feature Box Container -->
-    <section class="extra-box-container">
-        <div class="extra-box" id="scrolling-box">
-            <div class="scrolling-content">
-                <!-- First Set of Content -->
-                <div class="content">
-                    <h2>Welcome to Your Pathway to Success!</h2>
-                    <h4>We are dedicated to providing you with the best roadmaps to achieve your career goals in the government sector. Our resources are designed to make your preparation easier and more effective, guiding you through each step of the process.</h4>
-                    <h4>Common sectors include public administration, defense, education, healthcare, transportation, and law enforcement. Opportunities range from administrative roles to specialized positions like engineers, doctors, and IT professionals. Recruitment processes typically involve exams, interviews, or skill-based tests, making these jobs highly sought after due to their stability and structured growth opportunities.</h4>
-                    <h4>Remember, the path may be demanding, but your hard work will pay off. All the best on your journey toward success! Your dedication and perseverance will lead you to the opportunities you seek.</h4>
-                    <h5>Stay motivated, and keep pushing forward!</h5>
-                    <h1>All the Best!</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+			.drop-item {
+				color: white;
+				text-decoration: none;
+				display: block;
+				padding: 5px 0;
+			}
 
-    <!-- Image with Hover Effect -->
-    <div class="con">
-        <img src="../IMAGES/roadmapmain.jpg" alt="">
-    </div>
+			.branding-header {
+				text-align: center;
+				padding: 20px;
+				background-color: #f4f4f4;
+			}
 
-    <!-- Text Below Image -->
-    <div class="textf">
-        <h1>Chart your path to success with our expert career roadmaps!</h1>
-    </div>
+			.main-content {
+				padding: 20px;
+			}
 
-    <!-- Image Container with Side-by-Side Images -->
-    <div class="image-container">
-        <!-- First Image -->
-        <div class="image-box">
-            <a href="index2.html" class="image-link">
-                <img src="../IMAGES/roadmap1.jpg" alt="Image 1" class="side-image">
-            </a>
-            <div class="arrow-down">&#x25BC;</div> <!-- Downward arrow -->
-            <div class="content-box">
-                <h2>Role Based Roadmaps</h2>
-                <button class="toggle-btn" data-target="role-roadmaps-modal">Read More</button>
+			.extra-box-container {
+				margin-bottom: 20px;
+			}
 
-            </div>
-        </div>
+			.con,
+			.con1 {
+				text-align: center;
+			}
 
-        <!-- Second Image -->
-        <div class="image-box">
-            <a href="#link2" class="image-link">
-                <img src="../IMAGES/roadmap2.jpg" alt="Image 2" class="side-image">
-            </a>
-            <div class="arrow-down">&#x25BC;</div> <!-- Downward arrow -->
-            <div class="content-box">
-                <h2>Skill Based Roadmaps</h2>
-                <button class="toggle-btn" data-target="skill-roadmaps-modal">Read More</button>
+			.image-container {
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
 
-            </div>
-        </div>
-    </div>
-</main>
+			.image-box {
+				width: 45%;
+				margin-bottom: 20px;
+			}
 
-<div class="con1">
+			.image-link img {
+				width: 100%;
+				height: auto;
+			}
 
-</div>
+			.content-box {
+				text-align: center;
+			}
 
+			.modal {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				justify-content: center;
+				align-items: center;
+			}
 
+			.modal-content {
+				background-color: white;
+				padding: 20px;
+				border-radius: 5px;
+				width: 80%;
+				max-width: 600px;
+			}
 
+			.footer {
+				background-color: #333;
+				color: white;
+				padding: 20px;
+			}
 
-    
-        <div class="modal" id="role-roadmaps-modal">
-            <div class="modal-content">
-                <h2>Role Based Roadmaps</h2>
-                <ul class="job-list">
-                    <div class="job-row">
-                        <li onclick="toggleContent('frontend')">Frontend Developer</li>
-                        <li onclick="toggleContent('backend')">Backend Developer</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('devops')">DevOps</li>
-                        <li onclick="toggleContent('fullstack')">Full Stack Developer</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('ai-data-scientist')">AI and Data Scientist</li>
-                        <li onclick="toggleContent('data-analyst')">Data Analyst</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('android')">Android Developer</li>
-                        <li onclick="toggleContent('ios')">iOS Developer</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('blockchain')">Blockchain Developer</li>
-                        <li onclick="toggleContent('postgresql')">PostgreSQL</li>
-                    </div>
-                   
-                    <div class="job-row">
-                        <li onclick="toggleContent('cyber-security')">Cyber Security</li>
-                        <li onclick="toggleContent('ux-design')">UX Design</li>
+			.footer-container {
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
 
-                    </div>
-                    
-                    
-                </ul>
+			.footer-section {
+				width: 30%;
+				margin-bottom: 20px;
+			}
 
-                <div id="frontend" class="job-content">
-                    
-                    <img src="../IMAGES/frontend.jpg" alt="road"  style="width: 1200px">
-               
-                </div>
+			.footer-section h3 {
+				margin-top: 0;
+			}
 
+			.footer-section ul {
+				list-style: none;
+				padding: 0;
+			}
 
+			.footer-section ul li {
+				margin-bottom: 10px;
+			}
 
-                <div id="backend" class="job-content">
-                    
-                    <img src="../IMAGES/backend.jpg" alt="road"  style="width: 1200px">
-               
-                </div>
+			.footer-section ul li a {
+				color: white;
+				text-decoration: none;
+			}
 
+			.social-icons a {
+				margin-right: 10px;
+			}
 
-                <button class="close-btn">Close</button>
-            </div>
-        </div>
+			.footer-bottom {
+				text-align: center;
+				margin-top: 20px;
+			}
 
+			/* Responsive Styles */
+			@media (max-width: 768px) {
+				.navbar {
+					flex-direction: column;
+					align-items: flex-start;
+				}
 
+				.nav-links {
+					flex-direction: column;
+					gap: 10px;
+				}
 
+				.image-box {
+					width: 100%;
+				}
 
+				.footer-section {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="navbar">
+			<div class="logo">
+				<a href="way.html"
+					><img
+						src="../IMAGES/white.png"
+						alt="Logo"
+						height="60px"
+						width="60px"
+				/></a>
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="way.html">Home</a></li>
 
-        <div class="modal" id="skill-roadmaps-modal">
-            <div class="modal-content">
-                <h2>Skill Based Roadmaps</h2>
-                <ul class="job-list">
-                    <div class="job-row">
-                        <li onclick="toggleContent('computer-science')">Computer Science</li>
-                        <li onclick="toggleContent('react')">React</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('sql')">SQL</li>
-                        <li onclick="toggleContent('angular')">Angular</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('javascript')">JavaScript</li>
-                        <li onclick="toggleContent('node-js')">Node.js</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('typescript')">TypeScript</li>
-                        <li onclick="toggleContent('python')">Python</li>
-                    </div>
-                   
-                   
-                    <div class="job-row">
-                        <li onclick="toggleContent('java')">Java</li>
-                        <li onclick="toggleContent('c++')">C++</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('flutter')">Flutter</li>
-                        <li onclick="toggleContent('spring-boot')">Spring Boot</li>
-                    </div>
-                   
-                   
-                    <div class="job-row">
-                        <li onclick="toggleContent('prompt-engineering')">Prompt Engineering</li>
-                        <li onclick="toggleContent('kubernetes')">Kubernetes</li>
-                    </div>
-                    <div class="job-row">
-                        <li onclick="toggleContent('linux')">Linux</li>
-                        <li onclick="toggleContent('mongodb')">MongoDB</li>
-                    </div>
-                   
-                    <div class="job-row">
-                        <li onclick="toggleContent('data-structures-algorithms')">Data Structures & Algorithms</li>
-                        <li onclick="toggleContent('git-github')">Git and GitHub</li>
-                    </div>
-                   
-                </ul>
+					<!-- Courses Dropdown -->
+					<li class="dropdown">
+						<a href="courses.html">Courses & Careers</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="courses.html">Courses</a>
+								<ul class="dropdown-submenu-menu">
+									<li>
+										<a href="../Courses/10thcourses.html">Courses after 10th</a>
+									</li>
+									<li>
+										<a href="../Courses/12thcourses.html">Courses after 12th</a>
+									</li>
+									<li>
+										<a href="../Courses/graduation.html"
+											>Courses after Graduation</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li><a href="careers.html">Careers</a></li>
 
+							<li><a href="govtjobs.html">Government Jobs</a></li>
+						</ul>
+					</li>
 
+					<li><a href="roadmap.html">Road Maps</a></li>
 
-                <div id="computer-science" class="job-content">
-                    
-                    <img src="../IMAGES/computerscience.jpg" alt="road"  style="width: 1200px">
-               
-                </div>
+					<!-- Interview Questions Dropdown -->
+					<li class="dropdown">
+						<a href="interview.html">Interview Questions</a>
+						<ul class="dropdown-menu">
+							<!-- Technical Jobs Dropdown -->
+							<li><a href="interview.html#technical">Technical</a></li>
+							<!--  Government Jobs Dropdown -->
+							<li><a href="interview.html#governmnet">Government</a></li>
 
+							<li><a href="faq.html">Q&A</a></li>
+						</ul>
+					</li>
 
+					<li><a href="query.html">Queries</a></li>
+				</ul>
+			</nav>
+			<div class="user-profile">
+				<img
+					src="../IMAGES/userlogo.jpg"
+					alt="User Logo"
+					class="user-logo"
+					id="user-icon" />
+				<span class="user-name">Ariga Shankar</span>
+				<div
+					class="drop-menu"
+					id="drop-menu">
+					<a
+						href="login.html"
+						class="drop-item"
+						>Logout</a
+					>
+					<a
+						href="#"
+						class="drop-item"
+						>Delete Account</a
+					>
+				</div>
+			</div>
+		</header>
 
-                <div id="react" class="job-content">
-                    
-                    <img src="../IMAGES/react.jpg" alt="road"  style="width: 1200px">
-               
-                </div>
+		<!-- Branding Header Container -->
+		<section class="branding-header">
+			<h1>Your journey to a fulfilling career starts with a clear roadmap!</h1>
+			<p>Embrace the Path Forward</p>
+		</section>
 
-                <button class="close-btn">Close</button>
-            </div>
-        </div>
+		<!-- Main Content Container -->
+		<main class="main-content">
+			<!-- Extra Feature Box Container -->
+			<section class="extra-box-container">
+				<div
+					class="extra-box"
+					id="scrolling-box">
+					<div class="scrolling-content">
+						<!-- First Set of Content -->
+						<div class="content">
+							<h2>Welcome to Your Pathway to Success!</h2>
+							<h4>
+								We are dedicated to providing you with the best roadmaps to
+								achieve your career goals in the government sector. Our
+								resources are designed to make your preparation easier and more
+								effective, guiding you through each step of the process.
+							</h4>
+							<h4>
+								Common sectors include public administration, defense,
+								education, healthcare, transportation, and law enforcement.
+								Opportunities range from administrative roles to specialized
+								positions like engineers, doctors, and IT professionals.
+								Recruitment processes typically involve exams, interviews, or
+								skill-based tests, making these jobs highly sought after due to
+								their stability and structured growth opportunities.
+							</h4>
+							<h4>
+								Remember, the path may be demanding, but your hard work will pay
+								off. All the best on your journey toward success! Your
+								dedication and perseverance will lead you to the opportunities
+								you seek.
+							</h4>
+							<h5>Stay motivated, and keep pushing forward!</h5>
+							<h1>All the Best!</h1>
+						</div>
+					</div>
+				</div>
+			</section>
 
+			<!-- Image with Hover Effect -->
+			<div class="con">
+				<img
+					src="../IMAGES/roadmapmain.jpg"
+					alt="" />
+			</div>
 
+			<!-- Text Below Image -->
+			<div class="textf">
+				<h1>Chart your path to success with our expert career roadmaps!</h1>
+			</div>
 
+			<!-- Image Container with Side-by-Side Images -->
+			<div class="image-container">
+				<!-- First Image -->
+				<div class="image-box">
+					<a
+						href="index2.html"
+						class="image-link">
+						<img
+							src="../IMAGES/roadmap1.jpg"
+							alt="Image 1"
+							class="side-image" />
+					</a>
+					<div class="arrow-down">&#x25BC;</div>
+					<!-- Downward arrow -->
+					<div class="content-box">
+						<h2>Role Based Roadmaps</h2>
+						<button
+							class="toggle-btn"
+							data-target="role-roadmaps-modal">
+							Read More
+						</button>
+					</div>
+				</div>
 
+				<!-- Second Image -->
+				<div class="image-box">
+					<a
+						href="#link2"
+						class="image-link">
+						<img
+							src="../IMAGES/roadmap2.jpg"
+							alt="Image 2"
+							class="side-image" />
+					</a>
+					<div class="arrow-down">&#x25BC;</div>
+					<!-- Downward arrow -->
+					<div class="content-box">
+						<h2>Skill Based Roadmaps</h2>
+						<button
+							class="toggle-btn"
+							data-target="skill-roadmaps-modal">
+							Read More
+						</button>
+					</div>
+				</div>
+			</div>
+		</main>
 
+		<div class="con1"></div>
 
-       
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3><a href="contact.html" style="text-decoration: none; color: inherit;">Contact Us</a></h3>
-                <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We’re here to help guide you through your educational and career journey. You can contact us via email, phone.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="way.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="govtjobs.html">Government Jobs</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="roadmap.html">Road Maps</a></li>
-                    <li><a href="interview.html">Interview Questions</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"><img src="../IMAGES/face.png" alt="Facebook"></a>
-                    <a href="https://x.com/"><img src="../IMAGES/twi.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/"><img src="../IMAGES/insta.png" alt="Instagram"></a>
-                    <a href="https://www.linkedin.com/login?fromSignIn=true"><img src="../IMAGES/link.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
-        </div>
-    </footer>
-    
+		<div
+			class="modal"
+			id="role-roadmaps-modal">
+			<div class="modal-content">
+				<h2>Role Based Roadmaps</h2>
+				<ul class="job-list">
+					<div class="job-row">
+						<li onclick="toggleContent('frontend')">Frontend Developer</li>
+						<li onclick="toggleContent('backend')">Backend Developer</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('devops')">DevOps</li>
+						<li onclick="toggleContent('fullstack')">Full Stack Developer</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('ai-data-scientist')">
+							AI and Data Scientist
+						</li>
+						<li onclick="toggleContent('data-analyst')">Data Analyst</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('android')">Android Developer</li>
+						<li onclick="toggleContent('ios')">iOS Developer</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('blockchain')">Blockchain Developer</li>
+						<li onclick="toggleContent('postgresql')">PostgreSQL</li>
+					</div>
 
-    <script src="../JS/roadmap.js"></script> <!-- Link to the same JavaScript file -->
-</body>
+					<div class="job-row">
+						<li onclick="toggleContent('cyber-security')">Cyber Security</li>
+						<li onclick="toggleContent('ux-design')">UX Design</li>
+					</div>
+				</ul>
+
+				<div
+					id="frontend"
+					class="job-content">
+					<img
+						src="../IMAGES/frontend.jpg"
+						alt="road"
+						style="width: 1200px" />
+				</div>
+
+				<div
+					id="backend"
+					class="job-content">
+					<img
+						src="../IMAGES/backend.jpg"
+						alt="road"
+						style="width: 1200px" />
+				</div>
+
+				<button class="close-btn">Close</button>
+			</div>
+		</div>
+
+		<div
+			class="modal"
+			id="skill-roadmaps-modal">
+			<div class="modal-content">
+				<h2>Skill Based Roadmaps</h2>
+				<ul class="job-list">
+					<div class="job-row">
+						<li onclick="toggleContent('computer-science')">
+							Computer Science
+						</li>
+						<li onclick="toggleContent('react')">React</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('sql')">SQL</li>
+						<li onclick="toggleContent('angular')">Angular</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('javascript')">JavaScript</li>
+						<li onclick="toggleContent('node-js')">Node.js</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('typescript')">TypeScript</li>
+						<li onclick="toggleContent('python')">Python</li>
+					</div>
+
+					<div class="job-row">
+						<li onclick="toggleContent('java')">Java</li>
+						<li onclick="toggleContent('c++')">C++</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('flutter')">Flutter</li>
+						<li onclick="toggleContent('spring-boot')">Spring Boot</li>
+					</div>
+
+					<div class="job-row">
+						<li onclick="toggleContent('prompt-engineering')">
+							Prompt Engineering
+						</li>
+						<li onclick="toggleContent('kubernetes')">Kubernetes</li>
+					</div>
+					<div class="job-row">
+						<li onclick="toggleContent('linux')">Linux</li>
+						<li onclick="toggleContent('mongodb')">MongoDB</li>
+					</div>
+
+					<div class="job-row">
+						<li onclick="toggleContent('data-structures-algorithms')">
+							Data Structures & Algorithms
+						</li>
+						<li onclick="toggleContent('git-github')">Git and GitHub</li>
+					</div>
+				</ul>
+
+				<div
+					id="computer-science"
+					class="job-content">
+					<img
+						src="../IMAGES/computerscience.jpg"
+						alt="road"
+						style="width: 1200px" />
+				</div>
+
+				<div
+					id="react"
+					class="job-content">
+					<img
+						src="../IMAGES/react.jpg"
+						alt="road"
+						style="width: 1200px" />
+				</div>
+
+				<button class="close-btn">Close</button>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-section">
+					<h3>
+						<a
+							href="contact.html"
+							style="text-decoration: none; color: inherit"
+							>Contact Us</a
+						>
+					</h3>
+					<p>
+						If you have any questions, feedback, or need assistance, feel free
+						to reach out to us. We’re here to help guide you through your
+						educational and career journey. You can contact us via email, phone.
+					</p>
+				</div>
+				<div class="footer-section">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="way.html">Home</a></li>
+						<li><a href="courses.html">Courses</a></li>
+						<li><a href="govtjobs.html">Government Jobs</a></li>
+						<li><a href="careers.html">Careers</a></li>
+						<li><a href="roadmap.html">Road Maps</a></li>
+						<li><a href="interview.html">Interview Questions</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a
+							href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"
+							><img
+								src="../IMAGES/face.png"
+								alt="Facebook"
+						/></a>
+						<a href="https://x.com/"
+							><img
+								src="../IMAGES/twi.png"
+								alt="Twitter"
+						/></a>
+						<a href="https://www.instagram.com/"
+							><img
+								src="../IMAGES/insta.png"
+								alt="Instagram"
+						/></a>
+						<a href="https://www.linkedin.com/login?fromSignIn=true"
+							><img
+								src="../IMAGES/link.png"
+								alt="LinkedIn"
+						/></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2024 Career Pathways. All Rights Reserved.</p>
+			</div>
+		</footer>
+
+		<script src="../JS/roadmap.js"></script>
+		<!-- Link to the same JavaScript file -->
+	</body>
 </html>
